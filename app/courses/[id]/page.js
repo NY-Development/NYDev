@@ -108,7 +108,7 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
                 className="flex items-center space-x-4 p-3 dark:bg-gray-850 rounded-lg"
               >
                 {/* Note: Ideally, use Next.js Image here too, but retaining <img> for simplicity */}
-                <img
+                <Image
                   src={inst.image}
                   alt={inst.name}
                   className="w-16 h-16 rounded-full border-2 border-indigo-400 ring-2 ring-indigo-100 dark:ring-indigo-900 object-cover"

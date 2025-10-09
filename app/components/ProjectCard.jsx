@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link'; // Use Link for navigation
 
 // Added 'link' and 'techTags' to props for future use
@@ -16,7 +17,7 @@ export default function ProjectCard({ title, desc, image, link = "#", techTags =
       {/* Project Image */}
       {/* Increased height for a more impactful image */}
       <div className="relative overflow-hidden">
-        <img 
+        <Image 
           src={image} 
           alt={`Screenshot of the ${title} project`} 
           className="w-full h-56 object-cover transition-opacity duration-500 group-hover:opacity-90"

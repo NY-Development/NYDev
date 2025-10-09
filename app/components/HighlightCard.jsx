@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock } from "lucide-react"; // Added Clock icon
+import Image from "next/image";
 
 // Helper function to check for "Coming Soon" state
 const isComingSoon = (link) => !link || link === "#" || link === "";
@@ -36,7 +37,7 @@ export default function HighlightCard({ title, desc, img, link, isNew }) {
       <div className="relative h-56 flex-shrink-0">
         
         {/* Image and Dark Overlay */}
-        <img 
+        <Image 
             src={img} 
             alt={title} 
             className={`object-cover w-full h-full ${comingSoon ? 'grayscale' : ''}`} // Grayscale for coming soon

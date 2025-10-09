@@ -1,4 +1,5 @@
 import { Award, Zap, Users } from 'lucide-react'; // Icons for values
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -41,7 +42,7 @@ export default function About() {
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             To be the leading development firm known for blending technical excellence with transparent, collaborative partnerships. We aim to set the standard for digital development quality in the NYC tech scene and beyond.
           </p>
-          <img 
+          <Image 
             src="/team_placeholder.jpg" 
             alt="NYDev Team working collaboratively" 
             className="w-full h-auto rounded-xl shadow-lg"

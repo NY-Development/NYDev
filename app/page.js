@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Award, Zap, Users } from "lucide-react";
 import HighlightCard from "./components/HighlightCard";
+import Image from "next/image";
 // -----------------------------------------------------------------------------
 // 🔹 Reusable Component: ValueCard
 // -----------------------------------------------------------------------------
@@ -160,7 +161,7 @@ export default function Home() {
               the NYC tech scene and beyond.
             </p>
             <div className="relative rounded-xl overflow-hidden shadow-lg">
-              <img
+              <Image
                 src="/team_placeholder.jpg"
                 alt="NYDev Team working collaboratively"
                 className="w-full h-auto object-cover max-h-64"
