@@ -1,4 +1,4 @@
-# 🎓 NYDev Learning Platform
+# 🎓 NYDev Official Website
 
 ## 🚀 Overview
 
