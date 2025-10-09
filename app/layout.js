@@ -1,4 +1,3 @@
-// app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -8,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 // Load Inter font
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter", // optional CSS variable
+  variable: "--font-inter",
   display: "swap",
   weight: ["100","200","300","400","500","600","700","800","900"],
 });

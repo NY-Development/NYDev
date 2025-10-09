@@ -13,7 +13,7 @@ export default function Contact() {
           className="text-5xl font-extrabold tracking-tight 
                      text-gray-900 dark:text-gray-100 mb-4"
         >
-          Let&apos;s Build Something Great {/* Escape the single quote */}
+          {`Let's Build Something Great `}
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           We're ready to discuss your project requirements. Fill out the form below or reach us directly.

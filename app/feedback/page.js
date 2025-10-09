@@ -60,7 +60,7 @@ export default function Feedback() {
           What Our Clients Say
         </h1>
         <p className="text-xl text-center text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Trusted by businesses across all industries. Hear directly from those we've helped succeed.
+          {`Trusted by businesses across all industries. Hear directly from those we've helped succeed.`}
         </p>
       </div>
 

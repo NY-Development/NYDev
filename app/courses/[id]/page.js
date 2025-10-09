@@ -50,7 +50,6 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
               height={10}
               src={course.image}
               alt={course.title}
-              // fill // Use 'fill' to make it responsive inside the parent div
               className="object-cover rounded-xl"
               sizes="(max-width: 1024px) 100vw, 33vw"
               priority
