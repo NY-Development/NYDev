@@ -162,6 +162,8 @@ export default function Home() {
             </p>
             <div className="relative rounded-xl overflow-hidden shadow-lg">
               <Image
+                width={10}
+                height={10}
                 src="/team_placeholder.jpg"
                 alt="NYDev Team working collaboratively"
                 className="w-full h-auto object-cover max-h-64"

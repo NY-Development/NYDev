@@ -8,7 +8,8 @@ export default function CourseCard ({ course }) {
     const linkPath = `/courses/${course.id}`;
 
     return (
-        <Link href={linkPath}
+        <Link 
+            href={linkPath}
             className={`${cardBg} shadow-xl rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 ${hoverClasses}`}
         >
             {/* Image with subtle gradient overlay */}

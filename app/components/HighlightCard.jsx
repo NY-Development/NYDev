@@ -38,6 +38,8 @@ export default function HighlightCard({ title, desc, img, link, isNew }) {
         
         {/* Image and Dark Overlay */}
         <Image 
+            width={10}
+            height={10}
             src={img} 
             alt={title} 
             className={`object-cover w-full h-full ${comingSoon ? 'grayscale' : ''}`} // Grayscale for coming soon

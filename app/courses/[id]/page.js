@@ -46,9 +46,11 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
           {/* Image (Using Next.js Image) */}
           <div className="col-span-1 relative h-64 lg:h-full min-h-[300px]">
             <Image
+              width={10}
+              height={10}
               src={course.image}
               alt={course.title}
-              fill // Use 'fill' to make it responsive inside the parent div
+              // fill // Use 'fill' to make it responsive inside the parent div
               className="object-cover rounded-xl"
               sizes="(max-width: 1024px) 100vw, 33vw"
               priority
@@ -109,6 +111,8 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
               >
                 {/* Note: Ideally, use Next.js Image here too, but retaining <img> for simplicity */}
                 <Image
+                  width={10}
+                  height={10}
                   src={inst.image}
                   alt={inst.name}
                   className="w-16 h-16 rounded-full border-2 border-indigo-400 ring-2 ring-indigo-100 dark:ring-indigo-900 object-cover"
