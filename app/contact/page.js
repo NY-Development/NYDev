@@ -16,7 +16,7 @@ export default function Contact() {
           {`Let's Build Something Great `}
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          We're ready to discuss your project requirements. Fill out the form below or reach us directly.
+          {`We're ready to discuss your project requirements. Fill out the form below or reach us directly.`}
         </p>
       </div>
 

@@ -12,13 +12,11 @@ const FormGroup = ({ label, id, children }) => (
                     React.Children.map(children, child =>
                         React.cloneElement(child, {
                             // The class list is applied directly to the input/textarea
-                            className: `
-                                w-full p-3 rounded-lg text-gray-900 dark:text-gray-100 
+                            className: `w-full p-3 rounded-lg text-gray-900 dark:text-gray-100 
                                 border border-gray-300 dark:border-gray-700 
                                 bg-gray-50 dark:bg-gray-900 
                                 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
-                                transition duration-150 ease-in-out
-                            `
+                                transition duration-150 ease-in-out`
                         })
                     )
                 }
