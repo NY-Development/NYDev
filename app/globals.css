@@ -1,0 +1,19 @@
+/* /app/globals.css */
+
+@import "tailwindcss";
+
+/* Custom styles to hide the scrollbar visually while allowing scrolling.
+  This is typically necessary for Tailwind v4.1 if 'overflow-y-scroll' alone
+  doesn't fix the reserved space.
+*/
+
+/* For Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge, and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
