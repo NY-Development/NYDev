@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 NYDev Learning Platform
 
-## Getting Started
+## 🚀 Overview
 
-First, run the development server:
+Welcome to the **NYDev Company Website repository**! This project serves as the online presence for **NYDev**, a startup dedicated to **building innovative digital solutions for businesses** seeking to enhance their operational efficiency and online engagement.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The application platform is built with **Next.js** and styled using **Tailwind CSS**. It is designed to showcase our expertise and detail the structured, modular courses we offer in modern development technologies like **React, Next.js, Node.js, Express, and Django**.
+
+## ✨ Features
+
+  - **Detailed Course Pages:** Dynamic routing to display rich course data including a full curriculum, instructor profiles, and pricing.
+  - **Interactive Curriculum:** An accordion component that breaks down each course into weekly modules with detailed lesson titles and descriptions.
+  - **Responsive Navigation:** A modern, mobile-friendly navbar with clear calls-to-action (CTAs).
+  - **Theming:** Seamless integration of light and dark modes using the `next-themes` setup.
+  - **Optimized Assets:** Utilizes the Next.js `Image` component for performance-optimized loading of course images and instructor photos.
+
+## 🛠️ Technology Stack
+
+| Category | Technology | Description |
+| :--- | :--- | :--- |
+| **Framework** | **Next.js** | React framework for production, handling routing and server-side features. |
+| **Styling** | **Tailwind CSS** | Utility-first CSS framework for rapid UI development and responsiveness. |
+| **Icons** | **Lucide Icons** | Simple, consistent, and customizable icon set. |
+| **State/Utils**| **React Hooks** | Manages component state and side effects. |
+| **Data Flow** | **`useParams` (Next/router)** | Used to fetch the correct course details based on the URL ID. |
+
+## 📦 Installation & Setup
+
+To get the NYDev platform running locally, follow these steps:
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/NY-Development/NYDev
+    cd NYDev
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Define Environment Variables** (if any backend or API calls are used):
+    Create a `.env.local` file in the root directory and add any necessary variables (e.g., API keys, database connection strings).
+
+4.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Access the application:**
+    Open your browser and navigate to `http://localhost:3000`.
+
+## 📁 Project Structure
+
+Key files and directories involved in the current components:
+
+```
+nydev-platform/
+├── app/
+│   ├── [id]/             # Course Detail Page route
+│   │   └── page.js       # -> The 'CourseDetail' component
+│   └── layout.js
+├── components/
+│   ├── Navbar.js         # Navigation component
+│   ├── ThemeToggle.js    # Dark/Light mode switcher
+│   └── ...
+└── data/
+    └── courseData.js     # Structured course information (including modules, instructors)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧩 Key Components
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### `Navbar.js`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The site-wide navigation bar. It is fully responsive, switches between light/dark mode, and highlights new or important routes (like the "Courses" badge) using Tailwind CSS for conditional styling.
 
-## Learn More
+### `CourseDetail.js`
 
-To learn more about Next.js, take a look at the following resources:
+The core component for viewing curriculum. It fetches course data based on the dynamic URL segment (`id`) and renders:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  Hero details (title, description, price).
+2.  Instructor profiles.
+3.  A nested **Curriculum Accordion** that displays weekly modules and individual lessons.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### `data/courseData.js`
 
-## Deploy on Vercel
+This file serves as the single source of truth for all course information. Its structure supports rich content, including an object of weekly modules, allowing the **CourseDetail** page to render granular lesson plans.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contribution
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+We welcome contributions\! If you have suggestions for new features, bug fixes, or course content improvements:
+
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+-----
