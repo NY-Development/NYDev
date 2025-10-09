@@ -97,7 +97,7 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
       <div className="grid lg:grid-cols-3 gap-10">
         
         {/* Instructors */}
-        <div className="lg:col-span-1 p-6 bg-white dark:bg-gray-900 rounded-xl shadow-lg h-fit border border-gray-100 dark:border-gray-800">
+        <div className="lg:col-span-1 p-6 dark:bg-gray-900 rounded-xl shadow-lg h-fit border border-gray-100 dark:border-gray-800">
           <h2 className="text-2xl font-bold mb-5 border-b pb-2 border-gray-200 dark:border-gray-700 text-indigo-600 dark:text-indigo-400">
             Meet Your Mentors
           </h2>
@@ -105,7 +105,7 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
             {course.instructors.map((inst, i) => (
               <div
                 key={i}
-                className="flex items-center space-x-4 p-3 bg-gray-50 dark:bg-gray-850 rounded-lg"
+                className="flex items-center space-x-4 p-3 dark:bg-gray-850 rounded-lg"
               >
                 {/* Note: Ideally, use Next.js Image here too, but retaining <img> for simplicity */}
                 <img

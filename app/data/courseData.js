@@ -7,8 +7,8 @@ export const courses = [
     fullDescription:
       "This beginner-friendly course helps you build a solid foundation in frontend development. You’ll learn to create responsive web pages, style them beautifully with CSS, and bring them to life using JavaScript.",
     instructors: [
-      { name: "Yamlak N.", title: "Lead Instructor", image: "/images/instructors/yamlak.jpg" },
-      { name: "Chala T.", title: "Frontend Engineer", image: "/images/instructors/chala.jpg" },
+      { name: "Yamlak N.", title: "Lead Instructor", image: "/yamlak.jpg" },
+      { name: "Chala T.", title: "Frontend Engineer", image: "/chala.jpg" },
     ],
     price: "1500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
@@ -59,7 +59,7 @@ export const courses = [
     fullDescription:
       "Designed for students with HTML, CSS, and JS background, this course focuses on component-driven development, props, state, and reusable UI patterns using React.",
     instructors: [
-      { name: "Chala T.", title: "Frontend Engineer", image: "/images/instructors/chala.jpg" },
+      { name: "Chala T.", title: "Frontend Engineer", image: "/chala.jpg" },
     ],
     price: "2500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
@@ -110,8 +110,8 @@ export const courses = [
     fullDescription:
       "This intensive bootcamp takes you from basic React concepts to advanced state management, API handling, and deployment. Perfect for those ready to become React professionals.",
     instructors: [
-      { name: "Yamlak N.", title: "Lead Developer", image: "/images/instructors/yamlak.jpg" },
-      { name: "Chala T.", title: "Frontend Engineer", image: "/images/instructors/chala.jpg" },
+      { name: "Yamlak N.", title: "Lead Developer", image: "/yamlak.jpg" },
+      { name: "Chala T.", title: "Frontend Engineer", image: "/chala.jpg" },
     ],
     price: "2500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
@@ -162,8 +162,8 @@ export const courses = [
     fullDescription:
       "React Native allows you to build native-quality mobile apps using the same React concepts. In this course, you’ll learn UI design, navigation, and backend integration for mobile apps.",
     instructors: [
-      { name: "Yamlak N.", title: "React Native Developer", image: "/images/instructors/yamlak.jpg" },
-      { name: "Chala T.", title: "Frontend & Mobile Engineer", image: "/images/instructors/chala.jpg" },
+      { name: "Yamlak N.", title: "React Native Developer", image: "/yamlak.jpg" },
+      { name: "Chala T.", title: "Frontend & Mobile Engineer", image: "/chala.jpg" },
     ],
     price: "1500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
@@ -214,7 +214,7 @@ export const courses = [
     fullDescription:
       "This course introduces backend fundamentals, including REST API design, routing, middleware, and connecting to databases. You’ll build real APIs used in production apps.",
     instructors: [
-      { name: "Yamlak N.", title: "Fullstack Developer", image: "/images/instructors/yamlak.jpg" },
+      { name: "Yamlak N.", title: "Fullstack Developer", image: "/yamlak.jpg" },
     ],
     price: "1500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
@@ -265,7 +265,7 @@ export const courses = [
     fullDescription:
       "This beginner-friendly course walks you through building secure, data-driven web applications using Django. You’ll learn how to handle models, views, templates, and authentication.",
     instructors: [
-      { name: "Chala T.", title: "Backend Engineer", image: "/images/instructors/chala.jpg" },
+      { name: "Chala T.", title: "Backend Engineer", image: "/chala.jpg" },
     ],
     price: "1500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({

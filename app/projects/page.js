@@ -1,47 +1,44 @@
 import ProjectCard from "../components/ProjectCard";
 
-// Enhanced project data with stable IDs and richer content
 const projects = [
   { 
     id: 1, 
-    title: "E-Commerce Platform", 
-    desc: "A scalable, high-performance online shop built with Next.js and integrated with Stripe for secure payment processing.", 
-    image: "/project1.jpg",
-    link: "/projects/ecommerce", // Use specific links
-    techTags: ["Next.js", "Tailwind CSS", "Stripe"],
+    title: "Procedure Notifier", 
+    desc: "A healthcare workflow notifier that ensures timely alerts for procedures, improving efficiency and patient care.", 
+    image: "/procedure.jpg",
+    link: "https://procedureNotifier.vercel.app",
+    techTags: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
   },
   { 
     id: 2, 
     title: "Bed Notification System | BNS", 
     desc: "A custom real-time system for hospital administration, providing complete bed assignment and patient flow management.", 
     image: "/project2.png",
-    link: "/projects/bns-system",
-    techTags: ["React", "Node.js", "Socket.io", "MongoDB"],
+    link: "https://bnst-beta.vercel.app",
+    techTags: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
   },
   { 
     id: 3, 
     title: "JobsPark Platform", 
     desc: "A comprehensive job posting and hiring web application featuring advanced filtering and candidate matching algorithms.", 
     image: "/project3.png",
-    link: "/projects/jobspark",
-    techTags: ["Next.js", "GraphQL", "PostgreSQL"],
+    link: "https://js-kk9h.onrender.com",
+    techTags: ["Next.js", "GraphQL", "PostgreSQL", "Tailwind CSS"],
   },
   { 
     id: 4, 
-    title: "Enterprise CRM Dashboard", 
-    desc: "A private, secure, and customizable Customer Relationship Management dashboard for internal operations.", 
-    image: "/project4.jpg",
-    link: "/projects/crm-dashboard",
-    techTags: ["React", "Redux", "Material UI"],
+    title: "Adama Bakery & Cake", 
+    desc: "A modern bakery website showcasing products, online orders, and delivery tracking for customers.", 
+    image: "/abc.jpg",
+    link: "https://abc.vercel.app",
+    techTags: ["Next.js", "Tailwind CSS", "Stripe", "React"],
   },
 ];
 
 export default function Projects() {
   return (
-    // Changed div to section and improved vertical padding
     <section className="max-w-7xl mx-auto py-24 px-6 sm:px-10" aria-labelledby="projects-heading">
       
-      {/* Enhanced typography for the heading */}
       <div className="text-center mb-16">
         <h1 
           id="projects-heading" 
@@ -55,9 +52,7 @@ export default function Projects() {
         </p>
       </div>
 
-      {/* Improved grid layout: 3 columns on desktop, better gap */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
-        {/* Use the stable 'id' for the key */}
         {projects.map((p) => <ProjectCard key={p.id} {...p} />)}
       </div>
       
