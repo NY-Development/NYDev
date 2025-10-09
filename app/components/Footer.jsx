@@ -37,7 +37,7 @@ export default function Footer() {
 
             {/* Social Links - Increased size and cleaner hover effect */}
             <div className="flex items-center gap-4 pt-2">
-              <SocialIcon Icon={Github} href="https://github.com/NYDev" label="GitHub" colorClass="hover:text-gray-700 dark:hover:text-gray-300" />
+              <SocialIcon Icon={Github} href="https://github.com/NY-Development" label="GitHub" colorClass="hover:text-gray-700 dark:hover:text-gray-300" />
               <SocialIcon Icon={Youtube} href="https://www.youtube.com/@NYDev-t6p" label="YouTube" colorClass="hover:text-red-600 dark:hover:text-red-400" />
               <SocialIcon Icon={Instagram} href="https://www.instagram.com/nydevofficial" label="Instagram" colorClass="hover:text-pink-500 dark:hover:text-pink-400" />
               <SocialIcon Icon={Mail} href="mailto:yamlaknegash96@gmail.com" label="Email" colorClass="hover:text-indigo-600 dark:hover:text-indigo-400" />
