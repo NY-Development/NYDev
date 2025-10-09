@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Mail, Phone, MapPin } from 'lucide-react';
 import ContactDetail from '../components/ContactDetail';
 import FormGroup from '../components/FormGroup';
@@ -13,7 +13,7 @@ export default function Contact() {
           className="text-5xl font-extrabold tracking-tight 
                      text-gray-900 dark:text-gray-100 mb-4"
         >
-          Let's Build Something Great
+          Let&apos;s Build Something Great {/* Escape the single quote */}
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           We're ready to discuss your project requirements. Fill out the form below or reach us directly.
@@ -35,7 +35,7 @@ export default function Contact() {
             Icon={Phone} 
             title="Call Us" 
             text="+251902142767" 
-            link="tel:+1555555338"
+            link="tel:+251902142767" // Updated to match the phone number
           />
           <ContactDetail 
             Icon={MapPin} 

@@ -69,8 +69,8 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 text-xl md:text-2xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300 font-light">
-            Innovative web and mobile solutions to drive your business forward, built with the latest{" "}
-            <strong className="font-extrabold">Next.js</strong> technology.
+            Innovative web and mobile solutions to drive your business forward, crafted by the dedicated team at{" "}
+            <strong className="font-extrabold">NYDev</strong>.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
