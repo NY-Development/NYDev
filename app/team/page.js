@@ -4,13 +4,13 @@ const team = [
   {
     name: "Chala Temesgen",
     role: "Backend Developer",
-    image: "/yamlak.jpg",
+    image: "/chala.jpg",
     desc: "Backend engineer specializing in Express.js and MongoDB, experienced in building scalable APIs and database architectures for modern web applications.",
   },
   {
     name: "Yamlak Negash",
     role: "Founder & Full-Stack Developer",
-    image: "/chala.jpg",
+    image: "/yamlak.jpg",
     desc: "Founder of NYDev and a passionate full-stack developer skilled in React and Django. Focused on creating seamless user experiences and leading innovative digital solutions from concept to deployment.",
   },
 ];
