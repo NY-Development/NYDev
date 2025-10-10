@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import { useParams } from "next/navigation";
-import Image from "next/image"; // Import Next.js Image component
-import { Clock, BookOpen, DollarSign, ChevronDown, ChevronUp, CheckCircle } from "lucide-react"; // Added CheckCircle
+import Image from "next/image"; 
+import { Clock, BookOpen, DollarSign, ChevronDown, ChevronUp, CheckCircle } from "lucide-react"; 
 import { courses } from "@/app/data/courseData";
+import Link from "next/link";
 
-export default function CourseDetail() { // Added 'courses' as a prop/mock
+export default function CourseDetail() {
   const { id } = useParams();
   const course = courses.find((c) => c.id === id);
-  // Renamed state to be more descriptive of the content
   const [openWeekKey, setOpenWeekKey] = useState(null); 
 
   if (!course)
@@ -19,38 +19,39 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
       </div>
     );
 
-  // Function to toggle the accordion, using the week's key string (e.g., 'week1')
   const toggleAccordion = (weekKey) => setOpenWeekKey(openWeekKey === weekKey ? null : weekKey);
 
-  // Convert the modules object into an array of [weekKey, lessonsArray] pairs for mapping
   const modulesArray = Object.entries(course.modules);
 
-  // Helper to format the week key (e.g., 'week1' -> 'Week 1')
   const formatWeekTitle = (weekKey) => {
     const num = weekKey.replace('week', '');
     return `Week ${num}`;
   };
 
-  // Calculate total number of lessons (BookOpen stat)
   const totalLessons = modulesArray.reduce((acc, [, lessons]) => acc + lessons.length, 0);
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
+      <Link 
+        href="/courses" 
+        className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition"
+      >
+         &larr; Back to Courses
+      </Link>
       
       {/* ---------------------------------------------------------------------- */}
       {/* HERO HEADER */}
       {/* ---------------------------------------------------------------------- */}
-      <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl p-6 lg:p-10 mb-10 border border-gray-100 dark:border-gray-800">
+      <div className="mt-6 bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl p-6 lg:p-10 mb-10 border border-gray-100 dark:border-gray-800">
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           
-          {/* Image (Using Next.js Image) */}
-          <div className="col-span-1 relative h-64 lg:h-full min-h-[300px]">
+          {/* Image (Using Next.js Image with 'fill' prop) */}
+          <div className="col-span-1 relative h-64 lg:h-full min-h-[300px] overflow-hidden rounded-xl">
             <Image
-              width={10}
-              height={10}
-              src={course.image}
-              alt={course.title}
-              className="object-cover rounded-xl"
+              src={course?.image}
+              alt={course?.title}
+              fill // Use 'fill' to make it scale within the parent div
+              className="object-cover w-full h-full rounded-xl"
               sizes="(max-width: 1024px) 100vw, 33vw"
               priority
             />
@@ -68,7 +69,7 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
               {course.fullDescription}
             </p>
 
-            {/* Info Pills (Updated to use module data) */}
+            {/* Info Pills */}
             <div className="flex flex-wrap gap-4 pt-4">
               <span className="flex items-center text-sm font-medium text-gray-800 dark:text-gray-200 bg-indigo-100 dark:bg-indigo-900/50 px-3 py-1.5 rounded-full">
                 <Clock className="w-4 h-4 mr-1.5 text-indigo-600 dark:text-indigo-400" />
@@ -85,7 +86,7 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
             </div>
 
             {/* CTA */}
-            <button className="w-full lg:w-auto mt-6 bg-indigo-600 text-white text-lg font-bold px-8 py-3 rounded-xl shadow-none md:shadow-xl hover:bg-indigo-700 transition-all transform hover:scale-[1.02] shadow-indigo-500/50">
+            <button className="w-full lg:w-auto mt-6 bg-indigo-600 text-white text-lg font-bold px-8 py-3 rounded-xl shadow-xl hover:bg-indigo-700 transition-all transform hover:scale-[1.02] shadow-indigo-500/50">
               Enroll Now
             </button>
           </div>
@@ -98,7 +99,7 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
       <div className="grid lg:grid-cols-3 gap-10">
         
         {/* Instructors */}
-        <div className="lg:col-span-1 p-6 dark:bg-gray-900 rounded-xl shadow-lg h-fit border border-gray-100 dark:border-gray-800">
+        <div className="lg:col-span-1 p-6 bg-white dark:bg-gray-900 rounded-xl shadow-lg h-fit border border-gray-100 dark:border-gray-800">
           <h2 className="text-2xl font-bold mb-5 border-b pb-2 border-gray-200 dark:border-gray-700 text-indigo-600 dark:text-indigo-400">
             Meet Your Mentors
           </h2>
@@ -108,14 +109,16 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
                 key={i}
                 className="flex items-center space-x-4 p-3 dark:bg-gray-850 rounded-lg"
               >
-                {/* Note: Ideally, use Next.js Image here too, but retaining <img> for simplicity */}
-                <Image
-                  width={10}
-                  height={10}
-                  src={inst.image}
-                  alt={inst.name}
-                  className="w-16 h-16 rounded-full border-2 border-indigo-400 ring-2 ring-indigo-100 dark:ring-indigo-900 object-cover"
-                />
+                {/* Applied Next.js Image component to instructor photos */}
+                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <Image
+                    width={64}
+                    height={64}
+                    src={inst.image}
+                    alt={inst.name}
+                    className="object-cover border-2 border-indigo-400 ring-2 ring-indigo-100 dark:ring-indigo-900"
+                  />
+                </div>
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-gray-100">
                     {inst.name}
@@ -132,7 +135,7 @@ export default function CourseDetail() { // Added 'courses' as a prop/mock
           </div>
         </div>
 
-        {/* Timeline (Detailed Curriculum Accordion - Now using modules) */}
+        {/* Timeline (Detailed Curriculum Accordion) */}
         <div className="lg:col-span-2">
           <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
             Detailed Course Curriculum

@@ -20,9 +20,13 @@ export default function CourseCard ({ course }) {
                     width={600}
                     height={400}
                     className="w-full h-48 object-cover" 
+                    // 💡 FIX: Add 'sizes' property to help Next.js choose the right resolution.
+                    // This tells Next.js: "On large screens, this image will be about 33vw wide."
+                    sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-indigo-900/10 dark:bg-indigo-900/20 mix-blend-multiply"></div>
             </div>
+
             
             <div className="p-6 flex flex-col h-full">
                 {/* Course Title and Description */}

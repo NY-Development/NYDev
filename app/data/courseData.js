@@ -1,309 +1,319 @@
 export const courses = [
+  // 🌐 FRONTEND BEGINNER
   {
     id: "frontend-beginner",
     title: "Frontend Development for Beginners",
     image: "/html.png",
-    description: "Start your web development journey by mastering HTML, CSS, and JavaScript from scratch.",
+    description:
+      "Start your web development journey by mastering HTML, CSS, and JavaScript from scratch.",
     fullDescription:
-      "This beginner-friendly course helps you build a solid foundation in frontend development. You’ll learn to create responsive web pages, style them beautifully with CSS, and bring them to life using JavaScript.",
+      "This beginner-friendly course builds a solid foundation in frontend development. You’ll learn to create responsive, visually appealing websites and bring them to life using JavaScript.",
     instructors: [
-      { name: "Yamlak N.", title: "Lead Instructor", image: "/yamlak.jpg" },
+      { name: "Yamlak N.", title: "Frontend Instructor", image: "/yamlak.jpg" },
       { name: "Chala T.", title: "Frontend Engineer", image: "/chala.jpg" },
     ],
     price: "1500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
       title: `Week ${i + 1}`,
-      content: `Deep dive into frontend concepts and practical application during week ${i + 1}.`,
+      content: `Progressive learning of frontend fundamentals during week ${i + 1}.`,
     })),
     modules: {
       week1: [
-        { title: "Intro to HTML", desc: "Learn about basic HTML structure and tags." },
-        { title: "Document Setup", desc: "Understanding doctype, meta tags, and accessibility." },
+        { title: "Intro to HTML", desc: "Understand basic HTML structure and semantic tags." },
+        { title: "Document Setup", desc: "Learn doctype, meta tags, and accessibility best practices." },
       ],
       week2: [
-        { title: "CSS Basics", desc: "Selectors, color theory, and styling fundamentals." },
-        { title: "Box Model", desc: "Understanding padding, margin, and borders." },
+        { title: "CSS Basics", desc: "Selectors, colors, and styling essentials." },
+        { title: "Box Model", desc: "Master padding, margin, and border properties." },
       ],
       week3: [
-        { title: "Responsive Design", desc: "Making your site mobile-friendly with media queries." },
-        { title: "Flexbox Essentials", desc: "Layout control using CSS Flexbox." },
+        { title: "Responsive Design", desc: "Make layouts adaptable using media queries." },
+        { title: "Flexbox Essentials", desc: "Control page layouts with Flexbox." },
       ],
       week4: [
-        { title: "Grid Layouts", desc: "Advanced layouts using CSS Grid." },
-        { title: "Animations", desc: "Adding motion and transitions to your UI." },
+        { title: "Grid Layouts", desc: "Design advanced page layouts with CSS Grid." },
+        { title: "Animations", desc: "Add transitions and motion to your UI." },
       ],
       week5: [
-        { title: "Intro to JS", desc: "Variables, data types, and syntax." },
-        { title: "Functions & Loops", desc: "Control flow and function basics." },
+        { title: "Intro to JavaScript", desc: "Variables, data types, and basic syntax." },
+        { title: "Functions & Loops", desc: "Understand logic flow and function basics." },
       ],
       week6: [
-        { title: "DOM Manipulation", desc: "Interact with the document dynamically." },
-        { title: "Events & Listeners", desc: "Handling user input and browser events." },
+        { title: "DOM Manipulation", desc: "Change elements dynamically with JS." },
+        { title: "Events & Listeners", desc: "Respond to user input effectively." },
       ],
       week7: [
-        { title: "Project Planning", desc: "Plan your first mini web project." },
-        { title: "Code Optimization", desc: "Clean and efficient coding practices." },
+        { title: "Project Planning", desc: "Organize and design your first mini project." },
+        { title: "Code Optimization", desc: "Write clean, maintainable code." },
       ],
       week8: [
-        { title: "Final Project", desc: "Build your responsive website from scratch." },
-        { title: "Presentation", desc: "Showcase your finished project." },
+        { title: "Final Project", desc: "Build a complete responsive portfolio website." },
+        { title: "Presentation", desc: "Showcase your first real-world project." },
       ],
     },
   },
 
+  // ⚛️ FRONTEND INTERMEDIATE
   {
     id: "frontend-intermediate",
     title: "Frontend Intermediate – React Essentials",
     image: "/react.png",
-    description: "Take your frontend skills to the next level with React.js, the most popular JavaScript framework.",
+    description:
+      "Level up your frontend skills with React.js, the most popular JavaScript library for modern web apps.",
     fullDescription:
-      "Designed for students with HTML, CSS, and JS background, this course focuses on component-driven development, props, state, and reusable UI patterns using React.",
+      "For learners familiar with HTML, CSS, and JavaScript, this course introduces React’s component-driven development, state management, and best UI practices.",
     instructors: [
-      { name: "Chala T.", title: "Frontend Engineer", image: "/chala.jpg" },
+      { name: "Yamlak N.", title: "React Instructor", image: "/yamlak.jpg" },
     ],
-    price: "2500 ETB",
+    price: "2000 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
       title: `Week ${i + 1}`,
-      content: `Expand your React knowledge and build stronger interactive UIs during week ${i + 1}.`,
+      content: `Develop and expand your React skills during week ${i + 1}.`,
     })),
     modules: {
       week1: [
-        { title: "React Setup", desc: "Installing and configuring your first React project." },
-        { title: "JSX & Components", desc: "Understanding the building blocks of React." },
+        { title: "React Setup", desc: "Create and configure your first React project." },
+        { title: "JSX & Components", desc: "Understand React’s building blocks." },
       ],
       week2: [
-        { title: "Props & State", desc: "Managing data flow in React apps." },
-        { title: "Component Lifecycle", desc: "Learn how React components update and re-render." },
+        { title: "Props & State", desc: "Manage and share data between components." },
+        { title: "Lifecycle & Re-rendering", desc: "Understand how components update." },
       ],
       week3: [
-        { title: "Event Handling", desc: "Making apps interactive." },
-        { title: "Conditional Rendering", desc: "Render UI dynamically based on conditions." },
+        { title: "Event Handling", desc: "Handle user interactions seamlessly." },
+        { title: "Conditional Rendering", desc: "Render dynamic UIs based on logic." },
       ],
       week4: [
-        { title: "React Router", desc: "Creating multi-page experiences." },
-        { title: "Hooks Intro", desc: "Learn useState and useEffect." },
+        { title: "React Router", desc: "Build multipage React applications." },
+        { title: "Hooks Overview", desc: "Use useState and useEffect effectively." },
       ],
       week5: [
-        { title: "Fetching Data", desc: "Working with APIs and Axios." },
-        { title: "Custom Hooks", desc: "Reuse logic with custom functions." },
+        { title: "Fetching Data", desc: "Integrate APIs using Axios and Fetch." },
+        { title: "Custom Hooks", desc: "Extract and reuse logic easily." },
       ],
       week6: [
-        { title: "Context API", desc: "Manage global state efficiently." },
-        { title: "Performance Tips", desc: "Optimizing React applications." },
+        { title: "Context API", desc: "Simplify state sharing across components." },
+        { title: "Optimization", desc: "Improve performance and maintainability." },
       ],
       week7: [
-        { title: "UI Components", desc: "Reusable card, button, and modal components." },
-        { title: "Animations", desc: "Add motion to your React app using Framer Motion." },
+        { title: "UI Components", desc: "Build reusable design system components." },
+        { title: "Animations", desc: "Enhance UX with Framer Motion." },
       ],
       week8: [
-        { title: "Final Project", desc: "Build and deploy a React website." },
-        { title: "Presentation", desc: "Showcase your completed React project." },
+        { title: "Final Project", desc: "Develop and deploy a React website." },
+        { title: "Presentation", desc: "Showcase your work professionally." },
       ],
     },
   },
 
+  // 🚀 REACT BOOTCAMP
   {
     id: "react-bootcamp",
     title: "React Frontend Developer Bootcamp",
     image: "/react.png",
-    description: "Learn to build modern, dynamic web apps using React in 8 weeks.",
+    description:
+      "Become a professional React developer with hands-on projects and advanced concepts.",
     fullDescription:
-      "This intensive bootcamp takes you from basic React concepts to advanced state management, API handling, and deployment. Perfect for those ready to become React professionals.",
+      "This 8-week intensive bootcamp takes you from React fundamentals to production-ready apps. Includes routing, Redux Toolkit, authentication, and deployment.",
     instructors: [
-      { name: "Yamlak N.", title: "Lead Developer", image: "/yamlak.jpg" },
-      { name: "Chala T.", title: "Frontend Engineer", image: "/chala.jpg" },
+      { name: "Yamlak N.", title: "Lead React Developer", image: "/yamlak.jpg" },
     ],
     price: "2500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
       title: `Week ${i + 1}`,
-      content: `Focused bootcamp learning covering React topics for week ${i + 1}.`,
+      content: `Master React development through practical projects during week ${i + 1}.`,
     })),
     modules: {
       week1: [
-        { title: "React Fundamentals", desc: "Understand JSX, components, and state." },
-        { title: "Component Hierarchy", desc: "Design scalable component trees." },
+        { title: "React Fundamentals", desc: "JSX, components, and virtual DOM." },
+        { title: "Component Hierarchy", desc: "Structuring scalable React trees." },
       ],
       week2: [
-        { title: "Hooks Deep Dive", desc: "Learn useEffect, useRef, and useContext." },
-        { title: "React Router", desc: "Implement client-side routing." },
+        { title: "Hooks Deep Dive", desc: "useEffect, useRef, and custom hooks." },
+        { title: "React Router", desc: "Implement advanced routing systems." },
       ],
       week3: [
-        { title: "API Integration", desc: "Fetch and handle data from REST APIs." },
-        { title: "Error Handling", desc: "Graceful fallback and error components." },
+        { title: "API Integration", desc: "Manage async data flow with Axios." },
+        { title: "Error Boundaries", desc: "Handle errors gracefully in UI." },
       ],
       week4: [
-        { title: "Redux Toolkit", desc: "Manage complex state effectively." },
-        { title: "Middleware & Async", desc: "Use Thunks for async operations." },
+        { title: "Redux Toolkit", desc: "Simplify complex state management." },
+        { title: "Middleware", desc: "Handle async logic with Thunks." },
       ],
       week5: [
-        { title: "Authentication", desc: "Implement login and protected routes." },
-        { title: "Forms", desc: "Handle controlled inputs and validation." },
+        { title: "Authentication", desc: "Implement secure login & protected routes." },
+        { title: "Forms", desc: "Controlled components and validation." },
       ],
       week6: [
-        { title: "Deployment", desc: "Host your app on Vercel or Netlify." },
-        { title: "Performance", desc: "Use React DevTools and memoization." },
+        { title: "Performance", desc: "Optimize with memo, lazy loading, and suspense." },
+        { title: "Testing", desc: "Unit test components using Jest." },
       ],
       week7: [
-        { title: "Testing", desc: "Intro to Jest and React Testing Library." },
-        { title: "Best Practices", desc: "Code structure and project patterns." },
+        { title: "Deployment", desc: "Deploy apps on Vercel, Netlify, or Render." },
+        { title: "CI/CD Basics", desc: "Automate your deployment pipeline." },
       ],
       week8: [
-        { title: "Final Project", desc: "Develop a complete web app." },
-        { title: "Presentation", desc: "Demo your final bootcamp project." },
+        { title: "Final Project", desc: "Develop a real-world React web app." },
+        { title: "Presentation", desc: "Showcase your final product." },
       ],
     },
   },
 
+  // 📱 MOBILE DEVELOPMENT
   {
     id: "mobile-react-native",
     title: "Mobile App Development with React Native",
     image: "/react-native.png",
-    description: "Learn to build cross-platform mobile apps using React Native for Android and iOS.",
+    description:
+      "Build cross-platform mobile apps for Android and iOS using React Native.",
     fullDescription:
-      "React Native allows you to build native-quality mobile apps using the same React concepts. In this course, you’ll learn UI design, navigation, and backend integration for mobile apps.",
+      "Leverage React skills to build native-quality mobile apps. Learn navigation, APIs, storage, and performance optimization.",
     instructors: [
       { name: "Yamlak N.", title: "React Native Developer", image: "/yamlak.jpg" },
-      { name: "Chala T.", title: "Frontend & Mobile Engineer", image: "/chala.jpg" },
     ],
-    price: "1500 ETB",
+    price: "2500 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
       title: `Week ${i + 1}`,
-      content: `Explore mobile app concepts and practical applications during week ${i + 1}.`,
+      content: `Explore React Native mobile development during week ${i + 1}.`,
     })),
     modules: {
       week1: [
-        { title: "React Native Setup", desc: "Setting up the development environment." },
-        { title: "Core Components", desc: "Understanding components like View, Text, and Image." },
+        { title: "Setup", desc: "Install React Native and configure environment." },
+        { title: "Core Components", desc: "Learn View, Text, Image, and ScrollView." },
       ],
       week2: [
-        { title: "Styling", desc: "Using StyleSheet and Flexbox for layout." },
-        { title: "Navigation", desc: "Implementing navigation with React Navigation." },
+        { title: "Styling", desc: "Master StyleSheet and Flexbox layout." },
+        { title: "Navigation", desc: "Implement stacks and tabs with React Navigation." },
       ],
       week3: [
-        { title: "Handling User Input", desc: "Text inputs, buttons, and touchable components." },
-        { title: "State Management", desc: "Using hooks for local state." },
+        { title: "User Input", desc: "Handle forms, buttons, and gestures." },
+        { title: "State Management", desc: "Manage app state with hooks." },
       ],
       week4: [
-        { title: "API Integration", desc: "Fetching data from APIs using Fetch." },
-        { title: "Async Storage", desc: "Persisting data locally on devices." },
+        { title: "APIs & Data", desc: "Connect to APIs and handle async data." },
+        { title: "Async Storage", desc: "Persist user data locally." },
       ],
       week5: [
-        { title: "Native Modules", desc: "Integrating native functionalities." },
-        { title: "Debugging", desc: "Using tools to troubleshoot issues." },
+        { title: "Native Modules", desc: "Access camera, location, and sensors." },
+        { title: "Debugging", desc: "Use Flipper and React DevTools effectively." },
       ],
       week6: [
-        { title: "Testing", desc: "Unit and integration testing in React Native." },
-        { title: "Performance Optimization", desc: "Improving app performance." },
+        { title: "Performance", desc: "Improve load time and responsiveness." },
+        { title: "Testing", desc: "Write and run React Native tests." },
       ],
       week7: [
-        { title: "Publishing Apps", desc: "Steps to publish on App Store and Google Play." },
-        { title: "Project Planning", desc: "Plan and design your final mobile app." },
+        { title: "Publishing", desc: "Prepare apps for Play Store and App Store." },
+        { title: "Project Design", desc: "Plan your capstone mobile app." },
       ],
       week8: [
-        { title: "Final Project", desc: "Build a complete mobile application." },
-        { title: "Presentation", desc: "Showcase your developed app." },
+        { title: "Final Project", desc: "Build and polish your mobile app." },
+        { title: "Showcase", desc: "Present your completed application." },
       ],
     },
   },
 
+  // 🖥️ BACKEND (EXPRESS)
   {
     id: "backend-beginner-express",
     title: "Backend Development with Node.js & Express",
     image: "/node.png",
-    description: "Get started with server-side development using Node.js and Express.",
+    description:
+      "Learn backend fundamentals and build REST APIs using Node.js and Express.",
     fullDescription:
-      "This course introduces backend fundamentals, including REST API design, routing, middleware, and connecting to databases. You’ll build real APIs used in production apps.",
+      "Master server-side programming with Express.js. Learn to design APIs, connect databases, and deploy production-ready backends.",
     instructors: [
-      { name: "Yamlak N.", title: "Fullstack Developer", image: "/yamlak.jpg" },
+      { name: "Chala T.", title: "Backend Developer (Express & MongoDB)", image: "/chala.jpg" },
     ],
-    price: "1500 ETB",
+    price: "2000 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
       title: `Week ${i + 1}`,
-      content: `Explore backend concepts and practical applications during week ${i + 1}.`,
+      content: `Explore backend and database topics during week ${i + 1}.`,
     })),
     modules: {
       week1: [
-        { title: "Node.js Basics", desc: "Understanding Node environment and NPM packages." },
-        { title: "Setting Up Express", desc: "Creating your first Express server." },
+        { title: "Node.js Basics", desc: "Understand Node environment and NPM." },
+        { title: "Express Setup", desc: "Create and configure an Express server." },
       ],
       week2: [
-        { title: "Routing", desc: "Defining routes in Express." },
-        { title: "Middleware", desc: "Using middleware functions." },
+        { title: "Routing", desc: "Define routes and handle requests." },
+        { title: "Middleware", desc: "Use Express middleware for requests." },
       ],
       week3: [
-        { title: "RESTful APIs", desc: "Understanding REST principles." },
-        { title: "CRUD Operations", desc: "Implementing Create, Read, Update, Delete." },
+        { title: "RESTful APIs", desc: "Design clean API endpoints." },
+        { title: "CRUD Operations", desc: "Implement basic data manipulation." },
       ],
       week4: [
-        { title: "Database Integration", desc: "Connecting to MongoDB using Mongoose." },
-        { title: "Data Validation", desc: "Ensuring data integrity." },
+        { title: "Database Integration", desc: "Connect MongoDB with Mongoose." },
+        { title: "Validation", desc: "Validate and sanitize inputs." },
       ],
       week5: [
-        { title: "Authentication", desc: "Implementing JWT for user authentication." },
-        { title: "Error Handling", desc: "Handling errors gracefully." },
+        { title: "Authentication", desc: "Implement JWT-based authentication." },
+        { title: "Authorization", desc: "Secure routes and roles." },
       ],
       week6: [
-        { title: "API Security", desc: "Securing your APIs." },
-        { title: "Testing APIs", desc: "Using Postman for testing." },
+        { title: "Error Handling", desc: "Gracefully handle exceptions." },
+        { title: "API Testing", desc: "Use Postman and automated tests." },
       ],
       week7: [
-        { title: "Deployment", desc: "Deploying your Node.js application." },
-        { title: "Project Planning", desc: "Plan your final backend project." },
+        { title: "Deployment", desc: "Deploy to Render or Railway." },
+        { title: "CI/CD Setup", desc: "Automate backend deployment." },
       ],
       week8: [
-        { title: "Final Project", desc: "Build a REST API for a job posting app." },
-        { title: "Presentation", desc: "Showcase your completed API project." },
+        { title: "Final Project", desc: "Build a production-ready REST API." },
+        { title: "Presentation", desc: "Showcase your backend project." },
       ],
     },
   },
 
+  // 🐍 BACKEND (DJANGO)
   {
     id: "backend-beginner-django",
     title: "Backend Development with Python & Django",
     image: "/django.png",
-    description: "Learn backend development with Python’s powerful Django framework.",
+    description:
+      "Learn backend development using Django, Python’s most powerful web framework.",
     fullDescription:
-      "This beginner-friendly course walks you through building secure, data-driven web applications using Django. You’ll learn how to handle models, views, templates, and authentication.",
+      "Understand the Django ecosystem and build secure, data-driven web apps. Learn ORM, authentication, and deployment.",
     instructors: [
-      { name: "Chala T.", title: "Backend Engineer", image: "/chala.jpg" },
+      { name: "Yamlak N.", title: "Django Developer", image: "/yamlak.jpg" },
     ],
-    price: "1500 ETB",
+    price: "2000 ETB",
     timeline: Array.from({ length: 8 }, (_, i) => ({
       title: `Week ${i + 1}`,
-      content: `Explore Django concepts and practical applications during week ${i + 1}.`,
+      content: `Learn Django and backend principles during week ${i + 1}.`,
     })),
     modules: {
       week1: [
-        { title: "Django Setup", desc: "Installing Django and creating your first project." },
-        { title: "Understanding Django Apps", desc: "Project structure and app creation." },
+        { title: "Setup", desc: "Install Django and start your project." },
+        { title: "App Structure", desc: "Understand Django’s modular architecture." },
       ],
       week2: [
-        { title: "Models & Migrations", desc: "Creating models and managing database migrations." },
-        { title: "Admin Interface", desc: "Using Django’s built-in admin." },
+        { title: "Models", desc: "Design your database with ORM." },
+        { title: "Migrations", desc: "Apply and manage schema changes." },
       ],
       week3: [
-        { title: "Views & Templates", desc: "Creating views and rendering templates." },
-        { title: "Static Files", desc: "Managing CSS and JavaScript files." },
+        { title: "Views & Templates", desc: "Render dynamic pages." },
+        { title: "Static Files", desc: "Add CSS, JS, and images properly." },
       ],
       week4: [
-        { title: "Forms & Validation", desc: "Handling user input with forms." },
-        { title: "User Authentication", desc: "Implementing user login and registration." },
+        { title: "Forms", desc: "Handle user inputs securely." },
+        { title: "Authentication", desc: "Implement registration and login." },
       ],
       week5: [
-        { title: "Deploying Django Apps", desc: "Setting up production environments." },
-        { title: "Testing", desc: "Writing tests for your Django applications." },
+        { title: "Admin Panel", desc: "Customize Django admin interface." },
+        { title: "Testing", desc: "Write tests for Django apps." },
       ],
       week6: [
-        { title: "API Development", desc: "Building RESTful APIs with Django REST framework." },
-        { title: "Versioning APIs", desc: "Managing different API versions." },
+        { title: "Django REST Framework", desc: "Build RESTful APIs easily." },
+        { title: "API Permissions", desc: "Control access to API endpoints." },
       ],
       week7: [
-        { title: "Security Best Practices", desc: "Securing Django applications." },
-        { title: "Project Planning", desc: "Plan your final Django project." },
+        { title: "Security", desc: "Protect your app from vulnerabilities." },
+        { title: "Deployment", desc: "Deploy Django apps to production." },
       ],
       week8: [
-        { title: "Final Project", desc: "Build a complete Django application." },
-        { title: "Presentation", desc: "Showcase your completed Django project." },
+        { title: "Final Project", desc: "Build a complete Django web app." },
+        { title: "Showcase", desc: "Present your final backend project." },
       ],
     },
   },
