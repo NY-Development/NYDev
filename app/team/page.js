@@ -10,7 +10,7 @@ const team = [
   {
     name: "Yamlak Negash",
     role: "Founder & Full-Stack Developer",
-    image: "/team2.jpg",
+    image: "/chala.jpg",
     desc: "Founder of NYDev and a passionate full-stack developer skilled in React and Django. Focused on creating seamless user experiences and leading innovative digital solutions from concept to deployment.",
   },
 ];
