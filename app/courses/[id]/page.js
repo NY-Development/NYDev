@@ -94,7 +94,7 @@ export default function CourseDetail() {
                 </span>
                 <Link 
                 href="/enroll"
-                className="cursor-pointer flex-grow md:flex-grow-0 bg-indigo-600 text-white text-lg font-bold px-10 py-4 rounded-xl shadow-2xl hover:bg-indigo-700 transition-all transform active:scale-[0.98] shadow-indigo-500/50">
+                className="cursor-pointer md:flex-grow-0 bg-indigo-600 text-white text-lg font-bold px-2 py-2 md:px-10 md:py-4 rounded-xl shadow-2xl hover:bg-indigo-700 transition-all transform active:scale-[0.98] shadow-indigo-500/50">
                     Enroll Now
                 </Link>
             </div>
