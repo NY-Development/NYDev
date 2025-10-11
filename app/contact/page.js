@@ -34,13 +34,13 @@ export default function Contact() {
           <ContactDetail 
             Icon={Phone} 
             title="Call Us" 
-            text="+251902142767" 
-            link="tel:+251902142767" // Updated to match the phone number
+            text="+251973626204" 
+            link="tel:+251973626204" // Updated to match the phone number
           />
           <ContactDetail 
             Icon={MapPin} 
             title="Visit Our Office" 
-            text="Arada Subcity, 5Kilo Street, Addis Ababa, Ethiopia" 
+            text="Arada Subcity, King James Street, Addis Ababa, Ethiopia" 
             link="https://maps.app.goo.gl/WhGJK4YLPmKERjDj6" // Replace with a map link if available
           />
         </div>
