@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image"; 
 import { Clock, BookOpen, DollarSign, ChevronDown, ChevronUp, CheckCircle, CircleUserRound, Award } from "lucide-react"; // Added Award icon
@@ -92,9 +92,11 @@ export default function CourseDetail() {
                 <span className="text-4xl font-extrabold text-indigo-600 dark:text-indigo-400">
                     {course.price || "$TBD"}
                 </span>
-                <button className="cursor-pointer flex-grow md:flex-grow-0 bg-indigo-600 text-white text-lg font-bold px-10 py-4 rounded-xl shadow-2xl hover:bg-indigo-700 transition-all transform active:scale-[0.98] shadow-indigo-500/50">
+                <Link 
+                href="/enroll"
+                className="cursor-pointer flex-grow md:flex-grow-0 bg-indigo-600 text-white text-lg font-bold px-10 py-4 rounded-xl shadow-2xl hover:bg-indigo-700 transition-all transform active:scale-[0.98] shadow-indigo-500/50">
                     Enroll Now
-                </button>
+                </Link>
             </div>
           </div>
         </div>
