@@ -1,5 +1,5 @@
 import axios from "axios";
-import { NextResponse } from "next/server"; // Use NextResponse for Next.js 13+ App Router API Routes
+import { NextResponse } from "next/server"; 
 
 export async function POST(req) {
   try {
@@ -9,7 +9,7 @@ export async function POST(req) {
     const { 
       name, 
       email, 
-      courseId, // Changed from 'course' to 'courseId' to match frontend
+      courseId, 
       amount, 
       age,
       phoneNumber,
@@ -20,29 +20,26 @@ export async function POST(req) {
     } = body;
 
     // --- Validation ---
-    // Validate critical fields required for payment and enrollment
     if (!name || !email || !courseId || !amount || !phoneNumber) {
       return NextResponse.json({ message: "Missing required enrollment fields." }, { status: 400 });
     }
 
-    // Prepare data to save to your database (optional but recommended)
-    const enrollmentData = {
-        name,
-        email,
-        courseId,
-        amount,
-        age,
-        phoneNumber,
-        universityYear,
-        universityName,
-        department,
-        level,
-        // Chapa details will be added after successful init
-    };
+    // --- Data Sanitization for Chapa ---
+    // 1. Sanitize the courseId to remove illegal characters (slashes, colons, etc.)
+    // Allowed: letters, numbers, hyphens, underscores, spaces, and dots.
+    const cleanCourseId = courseId
+        .replace(/[^a-zA-Z0-9-_\s.]/g, '') // Remove disallowed characters
+        .trim();
+
+    // 2. Define the payment reference and Chapa customization details
+    const tx_ref = `tx-${Date.now()}-${cleanCourseId.substring(0, 5)}`; 
+    const shortTitle = "Course Payment"; 
+    
+    // Use a simple, clean description string
+    const cleanDescription = `Enrollment for ${cleanCourseId}`;
+
 
     // --- Chapa Payment Initialization ---
-    const tx_ref = `tx-${Date.now()}-${courseId}`; // Better reference including course ID
-
     const chapaResponse = await axios.post(
       "https://api.chapa.co/v1/transaction/initialize",
       {
@@ -50,15 +47,14 @@ export async function POST(req) {
         currency: "ETB",
         email,
         first_name: name,
-        // Phone number is optional for Chapa, but good to include
         phone_number: phoneNumber, 
         tx_ref,
-        // Customize the return URL to include the transaction reference
-        callback_url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/chapa/callback`, // Assuming a separate callback route for Chapa webhooks
-        return_url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/enroll/success?tx_ref=${tx_ref}`,
+        callback_url: `${process.env.NEXT_BACKEND_URL}/api/chapa/callback`,
+        return_url: `${process.env.NEXT_FRONTEND_URL}/enroll/success?tx_ref=${tx_ref}`,
         customization: {
-          title: `${courseId.toUpperCase()} Enrollment`,
-          description: `Student registration for ${courseId}`,
+          title: shortTitle, 
+          // Use the sanitized description
+          description: cleanDescription, 
         },
       },
       {
@@ -69,19 +65,15 @@ export async function POST(req) {
       }
     );
 
-    // After successful Chapa initialization, you can save the enrollment record
-    // to your database, marking it as 'PENDING'.
-    // e.g., await db.enrollments.create({ data: { ...enrollmentData, tx_ref, status: 'PENDING' } });
+    // ... (Optional: Save to DB here)
 
     return NextResponse.json({
       checkout_url: chapaResponse.data.data.checkout_url,
       tx_ref,
-      // Pass back the enrollment data ID if you saved it
     });
   } catch (error) {
     console.error("Chapa init error:", error.response?.data || error.message);
     
-    // Return a structured error response
     return NextResponse.json(
         { message: "Payment initialization failed", details: error.response?.data || error.message }, 
         { status: 500 }
