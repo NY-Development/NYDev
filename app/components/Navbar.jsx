@@ -32,7 +32,7 @@ export default function Navbar() {
                   bg-white/95 dark:bg-gray-950/95 
                   backdrop-blur-sm 
                   shadow-md dark:shadow-xl dark:shadow-gray-900/50 
-                  transition-colors duration-300 -mb-20"
+                  transition-colors duration-300 -mb-20 h-auto"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 lg:px-8">
         <Link

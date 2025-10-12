@@ -2,10 +2,7 @@
 
 @import "tailwindcss";
 
-/* Custom styles to hide the scrollbar visually while allowing scrolling.
-  This is typically necessary for Tailwind v4.1 if 'overflow-y-scroll' alone
-  doesn't fix the reserved space.
-*/
+/* Custom styles to hide the scrollbar visually while allowing scrolling. */
 
 /* For Chrome, Safari, and Opera */
 .no-scrollbar::-webkit-scrollbar {
@@ -17,3 +14,11 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* REMOVED THE CONFLICTING CSS:
+   body { ... }
+   .dark body { ... }
+   
+   The Tailwind utility classes on the <body> in RootLayout 
+   will now correctly apply the theme.
+*/

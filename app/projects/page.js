@@ -6,8 +6,9 @@ const projects = [
     title: "Procedure Notifier", 
     desc: "A healthcare workflow notifier that ensures timely alerts for procedures, improving efficiency and patient care.", 
     image: "/procedure.jpg",
-    link: "https://procedureNotifier.vercel.app",
+    link: "https://pn-jet.vercel.app",
     techTags: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+    status: true,
   },
   { 
     id: 2, 
@@ -16,6 +17,7 @@ const projects = [
     image: "/project2.png",
     link: "https://bnst-beta.vercel.app",
     techTags: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
+    status: true,
   },
   { 
     id: 3, 
@@ -24,6 +26,7 @@ const projects = [
     image: "/project3.png",
     link: "https://js-kk9h.onrender.com",
     techTags: ["Next.js", "GraphQL", "PostgreSQL", "Tailwind CSS"],
+    status: true,
   },
   { 
     id: 4, 
@@ -32,6 +35,7 @@ const projects = [
     image: "/abc.jpg",
     link: "https://abc.vercel.app",
     techTags: ["Next.js", "Tailwind CSS", "Stripe", "React"],
+    status: false,
   },
 ];
 

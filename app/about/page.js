@@ -43,7 +43,9 @@ export default function About() {
             To be the leading development firm known for blending technical excellence with transparent, collaborative partnerships. We aim to set the standard for digital development quality in the NYC tech scene and beyond.
           </p>
           <Image 
-            src="/team_placeholder.jpg" 
+            width={700}
+            height={10}
+            src="/team.jpg" 
             alt="NYDev Team working collaboratively" 
             className="w-full h-auto rounded-xl shadow-lg"
           />
