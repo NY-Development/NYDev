@@ -14,7 +14,7 @@ const services = [
       "We build fast, responsive, and scalable web apps using modern technologies like React, Next.js, Node.js, and Django — tailored to your business goals.",
     icon: <Globe className="w-10 h-10 text-white dark:text-gray-100" />,
     image: "/services/web.jpg",
-    link: "/services/web",
+    link: "/projects",
   },
   {
     title: "Mobile App Development",
@@ -22,7 +22,7 @@ const services = [
       "We design and develop mobile apps that deliver seamless experiences across iOS and Android using React Native and Flutter.",
     icon: <Smartphone className="w-10 h-10 text-white dark:text-gray-100" />,
     image: "/services/mobile.jpg",
-    link: "/services/mobile",
+    link: "/projects",
   },
   {
     title: "Branding & UI/UX Design",
@@ -30,7 +30,7 @@ const services = [
       "Our creative team helps you craft unique brand identities, logos, and user interfaces that captivate and engage your audience.",
     icon: <Palette className="w-10 h-10 text-white dark:text-gray-100" />,
     image: "/services/design.jpg",
-    link: "/services/design",
+    link: "/projects",
   },
   {
     title: "Backend & API Development",
@@ -38,7 +38,7 @@ const services = [
       "We provide reliable backend solutions with Express, Django, or Node.js — ensuring secure, high-performance APIs for your digital products.",
     icon: <Server className="w-10 h-10 text-white dark:text-gray-100" />,
     image: "/services/api.jpg",
-    link: "/services/backend",
+    link: "/projects",
   },
   {
     title: "Digital Marketing",
@@ -46,7 +46,7 @@ const services = [
       "We help your brand grow online through SEO, social media management, and performance marketing strategies that drive measurable results.",
     icon: <Megaphone className="w-10 h-10 text-white dark:text-gray-100" />,
     image: "/services/marketing.jpg",
-    link: "/services/marketing",
+    link: "/projects",
   },
   {
     title: "Custom Software Solutions",
@@ -54,7 +54,7 @@ const services = [
       "We create bespoke software solutions for startups and enterprises that automate processes, increase efficiency, and scale easily.",
     icon: <Code className="w-10 h-10 text-white dark:text-gray-100" />,
     image: "/services/custom.jpg",
-    link: "/services/custom",
+    link: "/projects",
   },
 ];
 

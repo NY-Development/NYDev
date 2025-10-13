@@ -4,16 +4,16 @@
 
 /* Custom styles to hide the scrollbar visually while allowing scrolling. */
 
-/* For Chrome, Safari, and Opera
+/* For Chrome, Safari, and Opera */
 .no-scrollbar::-webkit-scrollbar {
     display: none;
-} */
+}
 
 /* For IE, Edge, and Firefox */
-/* .no-scrollbar {
+.no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-} */
+}
 
 /* REMOVED THE CONFLICTING CSS:
    body { ... }
