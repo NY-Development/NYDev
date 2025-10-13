@@ -125,10 +125,10 @@ export default function Projects() {
                     // Empty state for filters
                     <div className="lg:col-span-3 md:col-span-2 text-center py-10">
                         <p className="text-2xl font-semibold text-gray-500 dark:text-gray-400">
-                            No projects found for "{activeFilter}".
+                            {`No projects found for "${activeFilter}".`}
                         </p>
                         <p className="text-gray-400 dark:text-gray-500 mt-2">
-                            We're currently working on adding more examples in this area!
+                            {`We're currently working on adding more examples in this area!`}
                         </p>
                     </div>
                 )}
