@@ -3,7 +3,7 @@ import { Github, Youtube, Instagram, Mail, ChevronRight } from "lucide-react";
 
 // Define footer navigation links
 const quickLinks = [
-  { name: "Services", href: "/services" },
+  { name: "Updates", href: "/updates" },
   { name: "Projects", href: "/projects" },
   { name: "Team", href: "/team" },
   { name: "Feedback", href: "/feedback" },

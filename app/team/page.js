@@ -4,7 +4,7 @@ const team = [
   {
     name: "Sana Matusala",
     role: "React Instructor",
-    image: "/sana.jpg", // Assuming an image file named sana.jpg
+    image: "/team/sana.jpg", // Assuming an image file named sana.jpg
     desc: "Dedicated React instructor and frontend expert focused on simplifying complex concepts. I empower students to build modern, scalable, and highly performant user interfaces.",
     links: {
       github: "https://github.com/matusalasana", // Placeholder
@@ -15,7 +15,7 @@ const team = [
   {
     name: "Chala Temesgen",
     role: "Backend Developer",
-    image: "/chala.jpg",
+    image: "/team/chala.jpg",
     desc: "Backend engineer specializing in Express.js and MongoDB, experienced in building scalable APIs and database architectures for modern web applications.",
     links: {
       github: "https://github.com/chala751",
@@ -27,7 +27,7 @@ const team = [
   {
     name: "Yamlak Negash",
     role: "Founder & Full-Stack Developer",
-    image: "/yamlak.jpg",
+    image: "/team/yamlak.jpg",
     desc: "Founder of NYDev and a passionate full-stack developer skilled in React and Django. Focused on creating seamless user experiences and leading innovative digital solutions from concept to deployment.",
     links: {
       github: "https://github.com/yamneg96",
@@ -40,7 +40,7 @@ const team = [
 //   {
 //     name: "Beliul Tilahun",
 //     role: "Cyber Security Specialist",
-//     image: "/beliul.jpg", // Assuming an image file named beliul.jpg
+//     image: "/team/beliul.jpg", // Assuming an image file named beliul.jpg
 //     desc: "Cyber security specialist dedicated to protecting digital assets. Focuses on threat analysis, vulnerability assessment, and implementing robust security protocols.",
 //     links: {
 //       github: "https://github.com/beliul_handle", // Placeholder
@@ -51,7 +51,7 @@ const team = [
 //   {
 //     name: "Nafargi Damena",
 //     role: "Frontend Engineer & Digital Marketer",
-//     image: "/nafargi.jpg", // Assuming an image file named nafargi.jpg
+//     image: "/team/nafargi.jpg", // Assuming an image file named nafargi.jpg
 //     desc: "A proactive Frontend Engineer proficient in UI/UX development, complemented by expertise in digital marketing, graphics, and logo design.",
 //     links: {
 //       github: "https://github.com/nafargi_handle", // Placeholder

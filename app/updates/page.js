@@ -7,30 +7,26 @@ const highlights = [
   {
     title: "Next.js Masterclass",
     desc: "A hands-on course to master Next.js — build production-ready web apps with real-world projects.",
-    img: "/images/nextjs_course.jpg",
+    img: "/nextjs.png",
     link: "/courses/nextjs-masterclass",
-    isNew: true,
+    isComingSoon: true,
+    isNew: false,
   },
   {
     title: "AI Integration Toolkit",
     desc: "Easily integrate AI-powered features into your apps using our new developer-friendly toolkit.",
-    img: "/images/ai_toolkit.jpg",
+    img: "/ai.png",
     link: "/products/ai-toolkit",
-    isNew: true,
+    isComingSoon: true,
+    isNew: false,
   },
   {
     title: "NYDev LaunchPad",
     desc: "Our new platform helps startups build and deploy their MVPs in weeks, not months.",
-    img: "/images/launchpad.jpg",
+    img: "/launch.png",
     link: "/services/launchpad",
+    isComingSoon: true,
     isNew: false,
-  },
-  {
-    title: "React Native Accelerator",
-    desc: "Fast-track your mobile app development journey with our new React Native training and tools.",
-    img: "/images/react_native_course.jpg",
-    link: "/courses/react-native",
-    isNew: true,
   },
 ];
 

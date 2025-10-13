@@ -23,8 +23,7 @@ export default function TestimonialCard({ name, title, feedback, avatar = "/avat
           <Image 
             src={avatar} 
             alt={`Avatar of ${name}`} 
-            width={56} // Explicit width (w-14 = 56px)
-            height={56} // Explicit height
+            fill={true}
             className="rounded-full object-cover border-2 border-indigo-500/50"
           />
         </div>

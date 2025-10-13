@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Award, Zap, Users } from "lucide-react";
+import { Award, Zap, Users, Globe, Smartphone, Palette } from "lucide-react";
 import HighlightCard from "./components/HighlightCard";
 import Image from "next/image";
 // -----------------------------------------------------------------------------
@@ -17,34 +17,34 @@ const ValueCard = ({ Icon, title, desc }) => (
 );
 
 // -----------------------------------------------------------------------------
-// 🔹 Data for Dynamic "What's New" Section
+// 🔹 Data for Dynamic "What's our service" Section
 // -----------------------------------------------------------------------------
-const highlights = [
+const services = [
   {
-    title: "Next.js Masterclass",
-    desc: "A hands-on course to master Next.js — build production-ready web apps with real-world projects.",
-    img: "/nextjs.png",
-    link: "/",
-    isComingSoon: true,
-    isNew: false,
+    title: "Web Development",
+    description:
+      "We build fast, responsive, and scalable web apps using modern technologies like React, Next.js, Node.js, and Django — tailored to your business goals.",
+    icon: <Globe className="w-10 h-10 text-white dark:text-gray-100" />,
+    image: "/services/web.jpg",
+    link: "/projects",
   },
   {
-    title: "AI Integration Toolkit",
-    desc: "Easily integrate AI-powered features into your apps using our new developer-friendly toolkit.",
-    img: "/ai.png",
-    link: "/products/ai-toolkit",
-    isComingSoon: true,
-    isNew: false,
+    title: "Mobile App Development",
+    description:
+      "We design and develop mobile apps that deliver seamless experiences across iOS and Android using React Native and Flutter.",
+    icon: <Smartphone className="w-10 h-10 text-white dark:text-gray-100" />,
+    image: "/services/mobile.jpg",
+    link: "/projects",
   },
   {
-    title: "NYDev LaunchPad",
-    desc: "Our new platform helps startups build and deploy their MVPs in weeks, not months.",
-    img: "/launch.png",
-    link: "/",
-    isComingSoon: true,
-    isNew: false,
+    title: "Branding & UI/UX Design",
+    description:
+      "Our creative team helps you craft unique brand identities, logos, and user interfaces that captivate and engage your audience.",
+    icon: <Palette className="w-10 h-10 text-white dark:text-gray-100" />,
+    image: "/services/design.jpg",
+    link: "/projects",
   },
-];
+]
 
 // -----------------------------------------------------------------------------
 // 🔹 Main Home Page Component
@@ -101,26 +101,70 @@ export default function Home() {
       <section className="py-24 px-6 sm:px-10 bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-gray-950">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100">
-            🚀 What’s New at NYDev
+            🚀 What are our services
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mt-4 max-w-3xl mx-auto">
-            Discover our latest releases, tools, and services — all designed to empower developers and
-            businesses in the digital era.
+            Ready to transform your business? See the solutions we offer.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {highlights.map((item, index) => (
-            <HighlightCard key={index} {...item} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
+          {services.map((service, index) => (
+            <article
+              key={index}
+              className="group flex flex-col rounded-xl bg-white dark:bg-gray-900 shadow-2xl dark:shadow-2xl dark:shadow-black/60 overflow-hidden transition-all duration-300 transform hover:scale-[1.01] hover:shadow-indigo-500/30 dark:hover:shadow-indigo-500/30"
+            >
+              
+              {/* Image & Icon Overlay */}
+              <div className="relative w-full h-48">
+                {/* Next.js Image Component */}
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                
+                {/* Icon Overlay Effect */}
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center transition-all duration-300 group-hover:bg-indigo-700/80">
+                  <div className="p-4 rounded-full bg-indigo-600/90 group-hover:bg-white/20 transition-colors duration-300 ring-4 ring-white/10">
+                    {service.icon}
+                  </div>
+                </div>
+              </div>
+              
+              {/* Content Area */}
+              <div className="p-6 md:p-8 flex flex-col flex-grow">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-gray-100">
+                  {service.title}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-400 mb-6 text-base flex-grow">
+                  {service.description}
+                </p>
+                
+                {/* CTA Button */}
+                <Link 
+                  href={service.link}
+                  className="mt-auto self-start inline-flex items-center justify-center 
+                            bg-indigo-600 text-white px-5 py-2.5 rounded-lg 
+                            text-base font-medium hover:bg-indigo-700 
+                            focus:outline-none focus:ring-4 focus:ring-indigo-500/50 
+                            transition-all duration-200 shadow-lg shadow-indigo-600/30"
+                >
+                  View Service Details →
+                </Link>
+              </div>
+            </article>
           ))}
         </div>
 
         <div className="text-center mt-16">
           <Link
-            href="/updates"
+            href="/services"
             className="inline-block px-8 py-4 bg-indigo-600 text-white text-lg rounded-xl shadow-lg hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 transition-all duration-300"
           >
-            See All Updates →
+            See All services →
           </Link>
         </div>
       </section>
@@ -134,7 +178,7 @@ export default function Home() {
             id="mission-heading"
             className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 mb-4"
           >
-            Your Digital Innovation Partner
+            About Us
           </h2>
           <p className="text-xl text-gray-700 dark:text-gray-400 max-w-3xl mx-auto">
             We specialize in creating modern, scalable web and mobile applications for businesses ready

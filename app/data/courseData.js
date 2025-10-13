@@ -10,7 +10,7 @@ export const courses = [
     fullDescription:
       "This beginner-friendly course builds a solid foundation in frontend development. You’ll learn to create responsive, visually appealing websites and bring them to life using JavaScript. By the end, you'll have a professional portfolio ready for junior roles.",
     instructors: [
-      { name: "Nafargi D.", title: "Lead Frontend Instructor", image: "/nafargi.jpg" }, // 🧑‍💻 Assigned Nafargi (Pro Frontend)
+      // { name: "Nafargi D.", title: "Lead Frontend Instructor", image: "/nafargi.jpg" }, // 🧑‍💻 Assigned Nafargi (Pro Frontend)
       { name: "Yamlak N.", title: "Frontend Instructor", image: "/yamlak.jpg" }, 
     ],
     price: "2000 ETB",

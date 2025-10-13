@@ -3,46 +3,45 @@ import TestimonialCard from "../components/TestimonialCard"; // Ensure this path
 const testimonials = [
   { 
     id: 1, 
-    name: "Client A", 
-    title: "Startup Founder",
+    name: "Selamawit T.", 
+    title: "Doctor",
     feedback: "NY Development transformed our business with their amazing app! They delivered on time and exceeded our expectations for quality and performance.",
-    avatar: "/avatars/avatar-1.jpg" 
+    avatar: "/feedback/selam.jpg" 
   },
   { 
     id: 2, 
-    name: "Client B", 
-    title: "Marketing Director",
-    feedback: "Professional team and top-notch services. Their communication and iterative development process were seamless and highly effective.",
-    avatar: "/avatars/avatar-2.jpg" 
+    name: "Sana M.", 
+    title: "React Developer",
+    feedback: "The team's iterative development process was seamless and highly effective. Excellent communication and truly top-notch professional service.",
+    avatar: "/feedback/sana.jpg" 
   },
   { 
     id: 3, 
-    name: "Client C", 
+    name: "Kidist Z.", 
     title: "Product Manager",
-    feedback: "Great experience working with NY Dev. The team is highly creative, technical, and always went the extra mile. Highly recommended.",
-    avatar: "/avatars/avatar-3.jpg" 
+    feedback: "Great experience working with NY Dev. The team is highly creative, technical, and always went the extra mile to achieve the final vision. Highly recommended.",
+    avatar: "/feedback/kidist.jpg" 
   },
   { 
     id: 4, 
-    name: "Client D", 
-    title: "Small Business Owner",
-    feedback: "The website they built for us is simply stunning and incredibly functional. It has significantly boosted our online presence.",
-    avatar: "/avatars/avatar-4.jpg" 
+    name: "Chala T.", 
+    title: "Backend Developer",
+    feedback: "Their deep technical expertise was evident from day one. They handled complex backend challenges with ease and delivered robust, clean code.",
+    avatar: "/feedback/chala.jpg" 
   },
   { 
     id: 5, 
-    name: "Client E", 
-    title: "Project Lead",
-    feedback: "Exceptional talent and dedication! NYDev helped us launch our mobile app ahead of schedule with fantastic results.",
-    avatar: "/avatars/avatar-5.jpg" 
+    name: "Besukal G.", 
+    title: "UI/UX Designer",
+    feedback: "The design execution was flawless. They seamlessly translated our wireframes and prototypes into a beautiful, highly intuitive user experience. Truly impressed with the final look.",
+    avatar: "/feedback/besukal.jpg" 
   },
   { 
     id: 6, 
-    name: "Client F", 
-    title: "CTO of a Tech Company",
-    feedback: "Their expertise in Next.js and backend development is unparalleled. A truly reliable and innovative partner.",
-    // Corrected Path: All images in the `public` directory must be referenced from the root (`/`)
-    avatar: "/project2.png" 
+    name: "Samuel T.", 
+    title: "Economist in Italy",
+    feedback: "What impressed me most was the long-term viability of the solution. They built a platform that is highly scalable and ensures a strong return on investment (ROI) for our future growth.",
+    avatar: "/feedback/samuel.jpg"
   },
 ];
 

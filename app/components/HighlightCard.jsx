@@ -46,9 +46,9 @@ const HighlightCard = ({ title, desc, img, link, isNew, isComingSoon } ) => {
           <p className="text-base text-gray-600 dark:text-gray-400">
             {desc}
           </p>
-          <span className="mt-4 text-indigo-600 dark:text-indigo-400 font-semibold flex items-center">
+          {/* <span className="mt-4 text-indigo-600 dark:text-indigo-400 font-semibold flex items-center">
             Learn More &rarr;
-          </span>
+          </span> */}
         </div>
       </div>
     </Link>

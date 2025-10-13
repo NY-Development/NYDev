@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 
 // Define the navigation items once for clean mapping
 const navItems = [
-  { name: "About", href: "/about" },
+  // { name: "About", href: "/about" },
   { name: "Courses", href: "/courses", isNew: true }, // Added isNew flag to Courses
   { name: "Projects", href: "/projects" },
   { name: "Team", href: "/team" },
