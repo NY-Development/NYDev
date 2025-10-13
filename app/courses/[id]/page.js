@@ -205,7 +205,7 @@ export default function CourseDetail() {
 
             {/* Price and CTA */}
             <div className="flex items-center gap-6 pt-6">
-              <span className="text-4xl font-extrabold text-indigo-600 dark:text-indigo-400">
+              <span className="text-xl font-extrabold text-indigo-600 dark:text-indigo-400">
                 {course.price || "$TBD"}
               </span>
               <Link 
