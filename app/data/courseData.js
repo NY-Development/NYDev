@@ -28,7 +28,7 @@ export const courses = [
     ],
     pricingPlans: [
       { name: "Standard Access", price: "2000 ETB", features: ["12 Weeks Live Access", "Course Materials (Lifetime)", "Certificate of Completion"] },
-      { name: "Premium Access", price: "3000 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Code Review", "Priority Support & Job Tips"] },
+      { name: "Premium Access", price: "3000 ETB", popular: true, features: ["Standard Features", "1 hour 1-on-1 Code Review", "Priority Support & Job Tips"] },
     ],
     whyPay: [
       "Access to Live, Interactive Sessions led by industry veterans.",
@@ -117,7 +117,7 @@ export const courses = [
     ],
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "React Project Templates", "Certificate of Completion"] },
-      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Code Review", "Final Project Deployment Assistance"] },
+      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "1 hour 1-on-1 Code Review", "Final Project Deployment Assistance"] },
     ],
     whyPay: [
       "Direct guidance from senior developers experienced with React in production.",
@@ -205,7 +205,7 @@ export const courses = [
     ],
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "Mobile Project Templates", "Certificate of Completion"] },
-      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "Expo/App Store Deployment Guide", "Advanced Native Module Training"] },
+      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "Expo/App Store Deployment Guide", "1 hour 1 on 1 code review"] },
     ],
     whyPay: [
       "Hands-on training focused entirely on mobile application architecture.",
@@ -292,7 +292,7 @@ export const courses = [
     ],
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "Backend Boilerplates", "Certificate of Completion"] },
-      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Debugging", "Advanced CI/CD Pipeline Setup"] },
+      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "1 hour 1-on-1 Debugging", "Chance of Working together."] },
     ],
     whyPay: [
       "Deep dive into API design principles and security best practices.",
@@ -466,7 +466,7 @@ export const courses = [
     ],
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "Laravel Project Templates", "Certificate of Completion"] },
-      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Debugging & Security Audit", "Optimization and Scaling Strategy"] },
+      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "1 hour 1-on-1 Debugging & Security Audit", "Optimization and Scaling Strategy"] },
     ],
     whyPay: [
       "Expert instruction focusing on modern PHP and the latest Laravel features.",
@@ -554,7 +554,7 @@ export const courses = [
     pricingPlans: [
       // Adjusted to 8 weeks to align with new curriculum scope
       { name: "Standard Access", price: "1000 ETB", features: ["8 Weeks Live Access", "Code Snippets Library", "Certificate of Completion"] },
-      { name: "Premium Access", price: "2000 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Debugging", "Advanced Data Structures Intro"] },
+      { name: "Premium Access", price: "2000 ETB", popular: true, features: ["Standard Features", "1 hour 1-on-1 Debugging", "Advanced Data Structures Intro"] },
     ],
     whyPay: [
       "Clear, structured instruction on a vital enterprise language.",
