@@ -66,16 +66,16 @@ export default function Navbar() {
               {item.isNew && <NewBadge />}
             </Link>
           ))}
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
 
         {/* Mobile Menu & Theme Toggle */}
         <div className="flex items-center space-x-4 md:hidden">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="cursor-pointer p-2 rounded-md text-gray-700 dark:text-gray-200 
-                        hover:bg-gray-100 dark:hover:bg-gray-800 
+                        hover:bg-indigo-700 dark:hover:bg-indigo-800 
                         focus:outline-none focus:ring-2 focus:ring-indigo-500"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
@@ -99,8 +99,8 @@ export default function Navbar() {
               href={item.href}
               onClick={closeMenu}
               className={`
-                block text-lg font-medium py-2 px-2 rounded-md 
-                hover:bg-indigo-50 dark:hover:bg-gray-800 
+                text-lg font-medium py-2 px-2 rounded-md 
+                hover:bg-indigo-500 dark:hover:bg-indigo-800 
                 transition-colors duration-200 flex items-center justify-between
                 ${item.isCta
                   ? 'text-indigo-600 dark:text-indigo-400 border border-indigo-500'

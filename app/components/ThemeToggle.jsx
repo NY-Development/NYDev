@@ -18,14 +18,11 @@ export default function ThemeToggle() {
     return <div className="w-10 h-10 p-2"></div>; 
   }
 
-  // Determine the next theme for the click
-  const nextTheme = theme === "dark" ? "light" : "dark";
-
   return (
     <button
-      onClick={() => setTheme(nextTheme)}
-      aria-label={`Toggle to ${nextTheme} mode`}
-      className="flex items-center justify-center w-10 h-10 p-2 rounded-full 
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      aria-label={`Toggle to ${theme} mode`}
+      className="cursor-pointer flex items-center justify-center w-10 h-10 p-2 rounded-full 
                  bg-gray-200 dark:bg-gray-800 
                  text-gray-900 dark:text-gray-100 
                  hover:ring-2 hover:ring-indigo-500 transition-all duration-300"

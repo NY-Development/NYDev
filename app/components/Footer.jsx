@@ -59,9 +59,9 @@ export default function Footer() {
           {/* Column 4: Contact/Location (Example) */}
           <FooterSection title="Headquarters">
             <address className="text-sm not-italic space-y-1 text-gray-600 dark:text-gray-400">
-              <p>Arada Subcity, 5Kilo Street</p>
+              <p>Arada Subcity, King James Street</p>
               <p>Addis Ababa, Ethiopia</p>
-              <p className="pt-2">+251902142767</p>
+              <p className="pt-2">+251973626204</p>
             </address>
           </FooterSection>
 
