@@ -11,7 +11,7 @@ export const courses = [
       "This beginner-friendly course builds a solid foundation in frontend development. You’ll learn to create responsive, visually appealing websites and bring them to life using JavaScript. By the end, you'll have a professional portfolio ready for junior roles.",
     instructors: [
       // { name: "Nafargi D.", title: "Lead Frontend Instructor", image: "/nafargi.jpg" }, // 🧑‍💻 Assigned Nafargi (Pro Frontend)
-      { name: "Yamlak N.", title: "Frontend Instructor", image: "/yamlak.jpg" }, 
+      { name: "Yamlak N.", title: "Frontend Instructor", image: "/team/yamlak.jpg" }, 
     ],
     price: "2000 ETB",
     // 🚨 UPDATED: Prerequisites for all courses (Beginner/General)
@@ -99,8 +99,8 @@ export const courses = [
     fullDescription:
       "This course covers React components, hooks, and modern UI practices to help you build dynamic web applications efficiently. You will create a full-featured single-page application (SPA).",
     instructors: [
-      { name: "Sana M.", title: "Lead React Instructor", image: "/sana.jpg" }, // 🧑‍💻 Assigned Sana (React Instructor)
-      { name: "Yamlak N.", title: "React Instructor", image: "/yamlak.jpg" },
+      { name: "Sana M.", title: "Lead React Instructor", image: "/team/sana.jpg" }, // 🧑‍💻 Assigned Sana (React Instructor)
+      { name: "Yamlak N.", title: "React Instructor", image: "/team/yamlak.jpg" },
     ],
     price: "2500 ETB",
     // 🚨 UPDATED: Prerequisites (Intermediate)
@@ -188,7 +188,7 @@ export const courses = [
     fullDescription:
       "This course guides you from the basics of mobile UI components to advanced topics like navigation, APIs, and deployment to Google Play Store. You will build a functional, cross-platform mobile app.",
     instructors: [
-      { name: "Yamlak N.", title: "Mobile Developer (React Native)", image: "/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (React Native)
+      { name: "Yamlak N.", title: "Mobile Developer (React Native)", image: "/team/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (React Native)
     ],
     price: "2500 ETB",
     // 🚨 UPDATED: Prerequisites (Intermediate)
@@ -275,7 +275,7 @@ export const courses = [
     fullDescription:
       "Master server-side programming with Express.js. Learn to design APIs, connect databases (MongoDB), and deploy production-ready backends for web and mobile applications.",
     instructors: [
-      { name: "Chala T.", title: "Lead Backend Developer (Express)", image: "/chala.jpg" }, // 🧑‍💻 Assigned Chala (Node/Express)
+      { name: "Chala T.", title: "Lead Backend Developer (Express)", image: "/team/chala.jpg" }, // 🧑‍💻 Assigned Chala (Node/Express)
     ],
     price: "2500 ETB",
     // 🚨 UPDATED: Prerequisites (Backend/JS Focus)
@@ -362,7 +362,7 @@ export const courses = [
     fullDescription:
       "Understand the Django ecosystem and build secure, data-driven web apps. Learn ORM, authentication, REST APIs with DRF, and deployment.",
     instructors: [
-      { name: "Yamlak N.", title: "Django Developer", image: "/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Django)
+      { name: "Yamlak N.", title: "Django Developer", image: "/team/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Django)
     ],
     price: "2500 ETB",
     // 🚨 UPDATED: Prerequisites (Backend/Python Focus)
@@ -449,7 +449,7 @@ export const courses = [
     fullDescription:
       "This 12-week course teaches you how to create dynamic and scalable applications using PHP and Laravel. From routing to authentication and deployment, you’ll gain industry-ready backend skills and build a full-scale web application.",
     instructors: [
-      { name: "Chala T.", title: "Lead Backend Developer (Laravel)", image: "/chala.jpg" }, // 🧑‍💻 Assigned Chala (PHP Backend)
+      { name: "Chala T.", title: "Lead Backend Developer (Laravel)", image: "/team/chala.jpg" }, // 🧑‍💻 Assigned Chala (PHP Backend)
     ],
     price: "2500 ETB",
     // 🚨 UPDATED: Prerequisites (Backend/PHP Focus)
@@ -536,7 +536,7 @@ export const courses = [
     fullDescription:
       "This course covers the fundamentals of Java, the most widely used enterprise programming language. You'll master Object-Oriented Programming (OOP) and build small, functional console applications.",
     instructors: [
-      { name: "Yamlak N.", title: "Java Instructor", image: "/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Java)
+      { name: "Yamlak N.", title: "Java Instructor", image: "/team/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Java)
     ],
     price: "1000 ETB",
     // 🚨 UPDATED: Prerequisites (Beginner/General)
@@ -610,7 +610,7 @@ export const courses = [
     fullDescription:
       "Beyond development, Python is the language of data. This course focuses on practical skills: cleaning, analyzing, and visualizing data using key libraries (Pandas/Matplotlib) and collecting data from the web (Beautiful Soup/Scrapy).",
     instructors: [
-      { name: "Yamlak N.", title: "Data Analyst & Python Instructor", image: "/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Python/Data Analyst)
+      { name: "Yamlak N.", title: "Data Analyst & Python Instructor", image: "/team/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Python/Data Analyst)
     ],
     price: "2500 ETB",
     // 🚨 UPDATED: Prerequisites (Beginner/General)
