@@ -168,7 +168,7 @@ export default function CourseDetail() {
             <Image
               src={course.image}
               alt={course.title}
-              fill
+              fill={true}
               className="object-cover w-full h-full"
               sizes="(max-width: 1024px) 100vw, 33vw"
               priority
