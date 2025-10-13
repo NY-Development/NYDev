@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // -----------------------------------------------------------------------------
-// 🔹 Helper Component: StatusBadge
+// 🔹 Helper Component: StatusBadge (RENAMED to PascalCase)
 // -----------------------------------------------------------------------------
-const StatusBadge = ({ status }) => {
-  if (status) {
+const StatusBadge = ({ isDone }) => {
+  if (isDone) {
     return (
       <span className="text-xs font-semibold px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300">
         Done
@@ -24,10 +24,10 @@ const StatusBadge = ({ status }) => {
 // 🔹 Main Component: ProjectCard
 // -----------------------------------------------------------------------------
 
-export default function ProjectCard({ title, desc, image, link = "#", status = false, techTags = [] }) {
+export default function ProjectCard({ title, desc, image, link = "#", isDone = false, techTags = [] }) {
     
   // Conditional variables for styling and component choice
-  const Tag = status ? Link : 'div';
+  const Tag = isDone ? Link : 'div';
   
   const baseClasses = `block bg-white dark:bg-gray-800 rounded-2xl shadow-lg 
                        dark:shadow-xl dark:shadow-indigo-900/10 overflow-hidden 
@@ -38,26 +38,18 @@ export default function ProjectCard({ title, desc, image, link = "#", status = f
 
   return (
     <Tag 
-      // Apply the link prop only if it is a Link component
-      {...(status ? { href: link } : {})}
-      
-      // Conditionally apply interactive or disabled classes
-      className={`${baseClasses} ${status ? interactiveClasses : disabledClasses}`}
+      {...(isDone ? { href: link } : {})}
+      className={`${baseClasses} ${isDone ? interactiveClasses : disabledClasses}`}
     >
       
       {/* Project Image Container */}
-      {/* 🚨 FIX: Container must be 'relative' and have a fixed height for Image fill prop to work */}
+      {/* 🚨 FIX 1: This is the container where the badge should be placed (relative) */}
       <div className="relative overflow-hidden h-56">
         <Image 
           src={image} 
           alt={`Screenshot of the ${title} project`} 
-          
-          // 🚨 FIX: Use 'fill' to make the image size itself to the parent container
           fill={true} 
-          
-          // Recommended: Use sizes prop for better image optimization
           sizes="(max-width: 768px) 100vw, 33vw"
-
           className="object-cover transition-opacity duration-500 group-hover:opacity-90"
         />
         
@@ -65,13 +57,13 @@ export default function ProjectCard({ title, desc, image, link = "#", status = f
         <div className="absolute inset-0 bg-indigo-900 opacity-0 group-hover:opacity-10 transition-opacity"></div>
       </div>
 
-      {/* Content Area */}
+      {/* Content Area - Removed 'relative' from here as the badge is no longer here */}
       <div className="relative p-6 space-y-3">
         {/* Title */}
         <h3 className={`text-xl font-bold 
-                        text-gray-900 dark:text-gray-100 
-                        transition-colors
-                        ${status ? 'group-hover:text-indigo-600 dark:group-hover:text-indigo-400' : ''}`}
+                         text-gray-900 dark:text-gray-100 
+                         transition-colors
+                         ${isDone ? 'group-hover:text-indigo-600 dark:group-hover:text-indigo-400' : ''}`}
         >
           {title}
         </h3>
@@ -83,7 +75,7 @@ export default function ProjectCard({ title, desc, image, link = "#", status = f
 
         {/* Tech Tags */}
         {techTags.length > 0 && (
-          <div className="flex flex-wrap gap-2 pt-2">
+          <div className="flex flex-wrap gap-2 p-2">
             {techTags.map(tag => (
               <span 
                 key={tag} 
@@ -95,9 +87,9 @@ export default function ProjectCard({ title, desc, image, link = "#", status = f
             ))}
           </div>
         )}
-        {/* Status Badge Positioned on the Image */}
+        {/* 🚨 FIX 2: Moved the badge back into the image container */}
         <div className="absolute bottom-4 right-4 z-10">
-            <StatusBadge status={status} />
+            <StatusBadge isDone={isDone} /> 
         </div>
       </div>
     </Tag>

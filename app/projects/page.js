@@ -107,17 +107,18 @@ export default function Projects() {
                 </p>
             </div>
 
-            {/* Tabbed Filter Navigation - 🚨 FIX: Added 'no-scrollbar' to remove visual scrollbar */}
-            <div className="mb-16 overflow-x-auto no-scrollbar">
-                <div className="flex justify-start sm:justify-center gap-3 pb-2">
+            {/* Tabbed Filter Navigation - 🚨 CHANGE: Switched from flex-scrolling to a responsive grid */}
+            <div className="mb-16">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 max-w-4xl mx-auto">
                     {categories.map(cat => (
-                        <TabButton key={cat.filter} {...cat} />
+                        // 🚨 NOTE: TabButton should now have w-full to fill the grid cell
+                        <TabButton key={cat.filter} {...cat} className="w-full" />
                     ))}
                 </div>
             </div>
 
             {/* Projects Grid */}
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10">
                 {filteredProjects.length > 0 ? (
                     filteredProjects.map((p) => <ProjectCard key={p.id} {...p} />)
                 ) : (
