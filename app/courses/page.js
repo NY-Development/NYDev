@@ -1,8 +1,8 @@
 "use client";
 import CourseCard from "../components/CourseCard";
-import { courses } from "../data/courseData";
+import { courses } from "@/app/data/courseData"; // Assuming courses is now imported from a deeper path
 
-export default function CoursesPage() { // Added courses as prop for demo simplicity
+export default function CoursesPage() {
   return (
     <main className="max-w-7xl mx-auto px-6 py-16">
       <h1 className="text-4xl font-extrabold mb-12 text-center text-gray-900 dark:text-gray-100">

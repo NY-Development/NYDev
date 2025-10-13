@@ -1,87 +1,58 @@
-"use client";
+// /app/components/HighlightCard.jsx (Assumed Content)
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, Clock } from "lucide-react"; // Added Clock icon
 import Image from "next/image";
 
-// Helper function to check for "Coming Soon" state
-const isComingSoon = (link) => !link || link === "#" || link === "";
-
-export default function HighlightCard({ title, desc, img, link, isNew }) {
-  const comingSoon = isComingSoon(link);
-
-  // Determine base styles, adding opacity/graying for 'Coming Soon' state
-  const baseClasses = `
-    relative rounded-2xl overflow-hidden h-full flex flex-col
-    transition-all duration-300
-    ${comingSoon 
-      ? 'dark:bg-gray-800 border-gray-300 dark:border-gray-700 opacity-70 cursor-not-allowed'
-      : 'dark:bg-gray-850 border border-gray-200 dark:border-indigo-700/30 shadow-xl hover:shadow-2xl'
-    }
-  `;
-  
-  // Conditionally wrap with motion.div for animation only if not 'Coming Soon'
-  const CardWrapper = comingSoon ? 'div' : motion.div;
-  const motionProps = comingSoon ? {} : {
-    whileHover: { scale: 1.03, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }, // Elevated shadow
-    whileTap: { scale: 0.98 },
-    transition: { type: "spring", stiffness: 200, damping: 20 }
-  };
-
+const HighlightCard = ({ title, desc, img, link, isNew, isComingSoon } ) => {
+  const cardClasses = "relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-800 flex flex-col h-full";
 
   return (
-    <CardWrapper
-      className={baseClasses}
-      {...motionProps}
-    >
-      <div className="relative h-56 flex-shrink-0">
-        
-        {/* Image and Dark Overlay */}
-        <Image 
-            width={10}
-            height={10}
-            src={img} 
-            alt={title} 
-            className={`object-cover w-full h-full ${comingSoon ? 'grayscale' : ''}`} // Grayscale for coming soon
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-
-        {/* Status Badges */}
-        {isNew && (
-          <span className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
-            NEW
-          </span>
-        )}
-        
-        {comingSoon && (
-          <span className="absolute bottom-4 right-4 bg-yellow-500 text-gray-900 px-4 py-1.5 rounded-lg text-base font-bold flex items-center shadow-lg">
-            <Clock className="w-4 h-4 mr-2" /> 
-            Coming Soon
-          </span>
-        )}
-      </div>
-
-      <div className="p-6 space-y-4 flex flex-col flex-grow">
-        <h3 className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-400 flex-grow">{desc}</p>
-        
-        {/* Call to Action or Disabled State */}
-        {comingSoon ? (
-            <span className="mt-4 inline-block text-gray-500 dark:text-gray-500 font-medium cursor-not-allowed border-b-2 border-dashed border-gray-400">
-                Check back soon
+    <Link href={link} className="block group h-full">
+      <div className={cardClasses}>
+        {/* Badge Section */}
+        <div className="absolute top-4 left-4 z-10 space-x-2">
+          {/* New Badge (Keep existing logic) */}
+          {isNew && (
+            <span className="inline-flex items-center px-3 py-1 text-xs font-semibold leading-none rounded-full text-green-800 bg-green-100 dark:bg-green-900 dark:text-green-300">
+              NEW
             </span>
-        ) : (
-            <Link
-                href={link}
-                className="mt-4 inline-flex items-center justify-center px-6 py-2.5 
-                           bg-indigo-600 hover:bg-indigo-700 text-white font-semibold 
-                           rounded-lg transition-colors duration-200 shadow-md 
-                           focus:ring-2 focus:ring-indigo-500"
-            >
-                View Project <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-        )}
+          )}
+          
+          {/* Coming Soon Badge (NEW ADDITION) */}
+          {isComingSoon && (
+            <span className="inline-flex items-center px-3 py-1 text-xs font-semibold leading-none rounded-full text-yellow-800 bg-yellow-100 dark:bg-yellow-900 dark:text-yellow-300">
+              COMING SOON
+            </span>
+          )}
+        </div>
+
+        {/* Image Section */}
+        <div className="relative h-56 w-full">
+          <Image
+            src={img}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className="transition-transform duration-500 group-hover:scale-105"
+          />
+          {/* Overlay to dim image slightly */}
+          <div className="absolute inset-0 bg-black/10 transition-opacity group-hover:bg-black/20"></div>
+        </div>
+
+        {/* Content Section */}
+        <div className="p-6 flex flex-col justify-between flex-grow">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-50 mb-3 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            {title}
+          </h3>
+          <p className="text-base text-gray-600 dark:text-gray-400">
+            {desc}
+          </p>
+          <span className="mt-4 text-indigo-600 dark:text-indigo-400 font-semibold flex items-center">
+            Learn More &rarr;
+          </span>
+        </div>
       </div>
-    </CardWrapper>
+    </Link>
   );
-}
+};
+
+export default HighlightCard;
