@@ -1,6 +1,17 @@
 import TeamCard from "../components/TeamCard";
 
 const team = [
+  {
+    name: "Sana Matusala",
+    role: "React Instructor",
+    image: "/sana.jpg", // Assuming an image file named sana.jpg
+    desc: "Dedicated React instructor and frontend expert focused on simplifying complex concepts. I empower students to build modern, scalable, and highly performant user interfaces.",
+    links: {
+      github: "https://github.com/matusalasana", // Placeholder
+      telegram: "https://t.me/Sana1514", // Placeholder
+      // Add other links as needed (e.g., linkedin, website)
+    },
+  },
   {
     name: "Chala Temesgen",
     role: "Backend Developer",
@@ -26,6 +37,28 @@ const team = [
       // website: "https://nydevofficial.vercel.app",
     },
   },
+//   {
+//     name: "Beliul Tilahun",
+//     role: "Cyber Security Specialist",
+//     image: "/beliul.jpg", // Assuming an image file named beliul.jpg
+//     desc: "Cyber security specialist dedicated to protecting digital assets. Focuses on threat analysis, vulnerability assessment, and implementing robust security protocols.",
+//     links: {
+//       github: "https://github.com/beliul_handle", // Placeholder
+//       telegram: "https://t.me/beliul_handle", // Placeholder
+//       // Add other links as needed
+//     },
+//   },
+//   {
+//     name: "Nafargi Damena",
+//     role: "Frontend Engineer & Digital Marketer",
+//     image: "/nafargi.jpg", // Assuming an image file named nafargi.jpg
+//     desc: "A proactive Frontend Engineer proficient in UI/UX development, complemented by expertise in digital marketing, graphics, and logo design.",
+//     links: {
+//       github: "https://github.com/nafargi_handle", // Placeholder
+//       telegram: "https://t.me/nafargi_handle", // Placeholder
+//       // Add other links as needed
+//     },
+//   },
 ];
 
 export default function Team() {
