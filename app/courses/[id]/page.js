@@ -6,7 +6,6 @@ import Image from "next/image";
 import { 
   Clock, 
   BookOpen, 
-  DollarSign, 
   ChevronDown, 
   ChevronUp, 
   CheckCircle, 
@@ -14,7 +13,8 @@ import {
   Award,
   CircleDollarSign, // Added for Pricing
   Handshake, // Added for Why Pay
-  Target // Added for Outcomes
+  Target, // Added for Outcomes
+  FileText, // 🚨 NEW ICON: Added for Prerequisites
 } from "lucide-react"; 
 // Assuming the courses data is imported from the correct relative path
 import { courses } from "@/app/data/courseData"; 
@@ -25,6 +25,7 @@ const tabs = [
   { id: 'outcomes', label: 'Key Outcomes', icon: Target },
   { id: 'pricing', label: 'Pricing Plans', icon: CircleDollarSign },
   { id: 'whyPay', label: 'Why Enroll?', icon: Handshake },
+  { id: 'prerequisites', label: 'Prerequisites', icon: FileText }, // 🚨 ADDED PREREQUISITES TAB
 ];
 
 export default function CourseDetail() {
@@ -110,7 +111,25 @@ export default function CourseDetail() {
       ))}
     </div>
   );
-
+  
+  // 🚨 NEW RENDERER: Prerequisites Tab Content
+  const renderPrerequisites = () => (
+    <div className="space-y-4">
+      {course.prerequisites && course.prerequisites.length > 0 ? (
+        course.prerequisites.map((req, i) => (
+          <div key={i} className="flex items-start text-gray-700 dark:text-gray-300">
+            <FileText className="w-5 h-5 mr-3 mt-1 text-yellow-600 dark:text-yellow-400 flex-shrink-0" />
+            <p>{req}</p>
+          </div>
+        ))
+      ) : (
+        <p className="text-gray-600 dark:text-gray-400 italic">
+          No specific prerequisites are listed for this course.
+        </p>
+      )}
+    </div>
+  );
+  
   const renderActiveTabContent = () => {
     switch (activeTab) {
       case 'outcomes':
@@ -119,6 +138,8 @@ export default function CourseDetail() {
         return renderPricing();
       case 'whyPay':
         return renderWhyPay();
+      case 'prerequisites': // 🚨 ADDED CASE
+        return renderPrerequisites();
       default:
         return null;
     }
@@ -198,7 +219,7 @@ export default function CourseDetail() {
       </div>
 
       {/* ---------------------------------------------------------------------- */}
-      {/* TABBED INFO SECTION (Outcomes, Pricing, Why Pay) */}
+      {/* TABBED INFO SECTION (Outcomes, Pricing, Why Pay, Prerequisites) */}
       {/* ---------------------------------------------------------------------- */}
       <div className="mb-12">
         <div className="flex flex-wrap border-b border-gray-200 dark:border-gray-700 mb-6">

@@ -10,23 +10,26 @@ export const courses = [
     fullDescription:
       "This beginner-friendly course builds a solid foundation in frontend development. You’ll learn to create responsive, visually appealing websites and bring them to life using JavaScript. By the end, you'll have a professional portfolio ready for junior roles.",
     instructors: [
-      { name: "Yamlak N.", title: "Frontend Instructor", image: "/yamlak.jpg" },
-      { name: "Chala T.", title: "Frontend Engineer", image: "/chala.jpg" },
+      { name: "Nafargi D.", title: "Lead Frontend Instructor", image: "/nafargi.jpg" }, // 🧑‍💻 Assigned Nafargi (Pro Frontend)
+      { name: "Yamlak N.", title: "Frontend Instructor", image: "/yamlak.jpg" }, 
     ],
     price: "2000 ETB",
-    // 🚨 NEW: Outcomes
+    // 🚨 UPDATED: Prerequisites for all courses (Beginner/General)
+    prerequisites: [
+      "Basic computer literacy (file management, web browser usage).", 
+      "A working computer with internet access.",
+      "A desire to learn programming and problem-solving.",
+    ],
     outcomes: [
       "Build responsive web pages using modern CSS (Flexbox/Grid).",
       "Manipulate the DOM dynamically with vanilla JavaScript.",
       "Create a working, multi-page personal portfolio.",
       "Understand web fundamentals (HTTP, APIs, Dev Tools).",
     ],
-    // 🚨 NEW: Pricing Plans
     pricingPlans: [
       { name: "Standard Access", price: "2000 ETB", features: ["12 Weeks Live Access", "Course Materials (Lifetime)", "Certificate of Completion"] },
       { name: "Premium Access", price: "3000 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Code Review", "Priority Support & Job Tips"] },
     ],
-    // 🚨 NEW: Why Payment is Necessary
     whyPay: [
       "Access to Live, Interactive Sessions led by industry veterans.",
       "Guaranteed post-course project review and portfolio building.",
@@ -96,22 +99,26 @@ export const courses = [
     fullDescription:
       "This course covers React components, hooks, and modern UI practices to help you build dynamic web applications efficiently. You will create a full-featured single-page application (SPA).",
     instructors: [
+      { name: "Sana M.", title: "Lead React Instructor", image: "/sana.jpg" }, // 🧑‍💻 Assigned Sana (React Instructor)
       { name: "Yamlak N.", title: "React Instructor", image: "/yamlak.jpg" },
     ],
     price: "2500 ETB",
-    // 🚨 NEW: Outcomes
+    // 🚨 UPDATED: Prerequisites (Intermediate)
+    prerequisites: [
+      "Strong understanding of HTML, CSS, and modern JavaScript (ES6+ features).", 
+      "Experience with command line interface and Git/GitHub.", 
+      "Knowledge of fundamental web development concepts (APIs, HTTP).",
+    ],
     outcomes: [
       "Master functional components, Hooks (useState, useEffect, etc.).",
       "Build multi-page applications using React Router.",
       "Manage complex state using Context API or Redux (brief intro).",
       "Build a real-world, data-fetching single-page application (SPA).",
     ],
-    // 🚨 NEW: Pricing Plans
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "React Project Templates", "Certificate of Completion"] },
       { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Code Review", "Final Project Deployment Assistance"] },
     ],
-    // 🚨 NEW: Why Payment is Necessary
     whyPay: [
       "Direct guidance from senior developers experienced with React in production.",
       "Access to exclusive, modern React project starter kits.",
@@ -181,22 +188,25 @@ export const courses = [
     fullDescription:
       "This course guides you from the basics of mobile UI components to advanced topics like navigation, APIs, and deployment to Google Play Store. You will build a functional, cross-platform mobile app.",
     instructors: [
-      { name: "Yamlak N.", title: "Mobile Developer (React Native)", image: "/yamlak.jpg" },
+      { name: "Yamlak N.", title: "Mobile Developer (React Native)", image: "/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (React Native)
     ],
     price: "2500 ETB",
-    // 🚨 NEW: Outcomes
+    // 🚨 UPDATED: Prerequisites (Intermediate)
+    prerequisites: [
+      "Proficiency in JavaScript (ES6+).",
+      "Familiarity with React.js is highly recommended.", 
+      "A conceptual understanding of mobile development paradigms.",
+    ],
     outcomes: [
       "Build native-feeling UIs using React Native components and Flexbox.",
       "Implement complex navigation using React Navigation.",
       "Integrate device features like camera, location, and storage.",
       "Publish a cross-platform app to Expo or a store.",
     ],
-    // 🚨 NEW: Pricing Plans
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "Mobile Project Templates", "Certificate of Completion"] },
       { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "Expo/App Store Deployment Guide", "Advanced Native Module Training"] },
     ],
-    // 🚨 NEW: Why Payment is Necessary
     whyPay: [
       "Hands-on training focused entirely on mobile application architecture.",
       "Expert guidance on handling native features and device APIs.",
@@ -254,7 +264,6 @@ export const courses = [
       ],
     },
   },
-
   // 🖥️ BACKEND – EXPRESS (Node.js)
   {
     id: "backend-beginner-express",
@@ -266,22 +275,25 @@ export const courses = [
     fullDescription:
       "Master server-side programming with Express.js. Learn to design APIs, connect databases (MongoDB), and deploy production-ready backends for web and mobile applications.",
     instructors: [
-      { name: "Chala T.", title: "Backend Developer (Express & MongoDB)", image: "/chala.jpg" },
+      { name: "Chala T.", title: "Lead Backend Developer (Express)", image: "/chala.jpg" }, // 🧑‍💻 Assigned Chala (Node/Express)
     ],
     price: "2500 ETB",
-    // 🚨 NEW: Outcomes
+    // 🚨 UPDATED: Prerequisites (Backend/JS Focus)
+    prerequisites: [
+      "Solid foundation in JavaScript (variables, functions, objects, asynchronous programming).", 
+      "Familiarity with databases (SQL/NoSQL basics) is a plus.",
+      "Understanding of HTTP methods (GET, POST, PUT, DELETE).",
+    ],
     outcomes: [
       "Build a robust RESTful API with Node.js and Express.",
       "Implement secure user authentication using JWT and bcrypt.",
       "Design and interact with MongoDB using Mongoose.",
       "Deploy a production-ready backend to a cloud service.",
     ],
-    // 🚨 NEW: Pricing Plans
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "Backend Boilerplates", "Certificate of Completion"] },
       { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Debugging", "Advanced CI/CD Pipeline Setup"] },
     ],
-    // 🚨 NEW: Why Payment is Necessary
     whyPay: [
       "Deep dive into API design principles and security best practices.",
       "Practical experience with MongoDB and Mongoose for database management.",
@@ -339,7 +351,6 @@ export const courses = [
       ],
     },
   },
-
   // 🐍 BACKEND – DJANGO
   {
     id: "backend-beginner-django",
@@ -351,22 +362,25 @@ export const courses = [
     fullDescription:
       "Understand the Django ecosystem and build secure, data-driven web apps. Learn ORM, authentication, REST APIs with DRF, and deployment.",
     instructors: [
-      { name: "Yamlak N.", title: "Django Developer", image: "/yamlak.jpg" },
+      { name: "Yamlak N.", title: "Django Developer", image: "/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Django)
     ],
     price: "2500 ETB",
-    // 🚨 NEW: Outcomes
+    // 🚨 UPDATED: Prerequisites (Backend/Python Focus)
+    prerequisites: [
+      "Solid foundation in Python (syntax, functions, classes).", 
+      "Understanding of relational databases (SQL basics) is beneficial.",
+      "Basic familiarity with the command line interface.",
+    ],
     outcomes: [
       "Master the MVC (Model-View-Controller) architecture with Django.",
       "Build complex data models using the Django ORM and PostgreSQL (intro).",
       "Develop secure RESTful APIs using Django REST Framework (DRF).",
       "Implement user authentication and authorization from scratch.",
     ],
-    // 🚨 NEW: Pricing Plans
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "Django Project Boilerplates", "Certificate of Completion"] },
       { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "DRF Advanced Customization", "Deployment and Scaling Advice"] },
     ],
-    // 🚨 NEW: Why Payment is Necessary
     whyPay: [
       "Deep expertise in the batteries-included approach of the Django framework.",
       "Hands-on practice with the Django ORM and database management (Migrations).",
@@ -412,7 +426,7 @@ export const courses = [
       ],
       week10: [
         { title: "Project Building Kick-off", desc: "Final project design, feature definition, and model architecture." },
-        { title: "Core CRUD & Authentication", desc: "Implement the main data access and user systems." },
+        { title: "Core CRUD & Authentication", desc: "Implement the primary data access and user systems." },
       ],
       week11: [
         { title: "Project Building: Advanced Features", desc: "Integrate APIs, file uploads, and advanced filtering." },
@@ -424,7 +438,6 @@ export const courses = [
       ],
     },
   },
-
   // 🧩 BACKEND – PHP & LARAVEL
   {
     id: "backend-php-laravel",
@@ -436,22 +449,25 @@ export const courses = [
     fullDescription:
       "This 12-week course teaches you how to create dynamic and scalable applications using PHP and Laravel. From routing to authentication and deployment, you’ll gain industry-ready backend skills and build a full-scale web application.",
     instructors: [
-      { name: "Chala T.", title: "Backend Developer (Laravel & PHP)", image: "/chala.jpg" },
+      { name: "Chala T.", title: "Lead Backend Developer (Laravel)", image: "/chala.jpg" }, // 🧑‍💻 Assigned Chala (PHP Backend)
     ],
     price: "2500 ETB",
-    // 🚨 NEW: Outcomes
+    // 🚨 UPDATED: Prerequisites (Backend/PHP Focus)
+    prerequisites: [
+      "Solid foundation in PHP (syntax, functions, OOP).", 
+      "Understanding of relational databases (SQL, joins).",
+      "Familiarity with the Model-View-Controller (MVC) concept.",
+    ],
     outcomes: [
       "Master the MVC architecture and the Laravel framework.",
       "Use the Eloquent ORM to manage relational databases.",
       "Implement advanced features like queuing, caching, and file storage.",
       "Build a secure, scalable web application ready for production.",
     ],
-    // 🚨 NEW: Pricing Plans
     pricingPlans: [
       { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "Laravel Project Templates", "Certificate of Completion"] },
       { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Debugging & Security Audit", "Optimization and Scaling Strategy"] },
     ],
-    // 🚨 NEW: Why Payment is Necessary
     whyPay: [
       "Expert instruction focusing on modern PHP and the latest Laravel features.",
       "Practical experience with Eloquent, Blade templating, and artisan commands.",
@@ -496,7 +512,7 @@ export const courses = [
         { title: "Queues & Background Jobs", desc: "Handle long-running tasks asynchronously." },
       ],
       week10: [
-        { title: "Project Building Kick-off", desc: "Define final project scope, features, and deployment goals." },
+        { title: "Project Building Kick-off", desc: "Final project design, feature definition, and deployment goals." },
         { title: "Core Database & Routing", desc: "Implement the primary models, migrations, and routes." },
       ],
       week11: [
@@ -506,6 +522,143 @@ export const courses = [
       week12: [
         { title: "Final Project Presentation", desc: "Showcase the complete, deployed Laravel application." },
         { title: "Career Preparation", desc: "Laravel developer interviews and next career steps." },
+      ],
+    },
+  },
+  // ☕ NEW COURSE: JAVA FOR BEGINNERS
+  {
+    id: "java-beginner",
+    title: "Java Programming for Beginners",
+    image: "/java.png", // Assuming a Java icon image
+    maxStudents: 20,
+    description:
+      "A strong introduction to Java, focusing on core OOP principles and industry-standard practices.",
+    fullDescription:
+      "This course covers the fundamentals of Java, the most widely used enterprise programming language. You'll master Object-Oriented Programming (OOP) and build small, functional console applications.",
+    instructors: [
+      { name: "Yamlak N.", title: "Java Instructor", image: "/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Java)
+    ],
+    price: "1000 ETB",
+    // 🚨 UPDATED: Prerequisites (Beginner/General)
+    prerequisites: [
+      "Basic computer literacy (file management, web browser usage).", 
+      "A working computer with internet access.",
+      "A desire to learn programming and problem-solving.",
+    ],
+    outcomes: [
+      "Master Java syntax, data types, and control flow.",
+      "Apply core OOP principles: Encapsulation, Inheritance, Polymorphism.",
+      "Handle exceptions and file I/O in Java.",
+      "Build a fully functional command-line application.",
+    ],
+    pricingPlans: [
+      // Adjusted to 8 weeks to align with new curriculum scope
+      { name: "Standard Access", price: "1000 ETB", features: ["8 Weeks Live Access", "Code Snippets Library", "Certificate of Completion"] },
+      { name: "Premium Access", price: "2000 ETB", popular: true, features: ["Standard Features", "4 hours 1-on-1 Debugging", "Advanced Data Structures Intro"] },
+    ],
+    whyPay: [
+      "Clear, structured instruction on a vital enterprise language.",
+      "Focus on core OOP concepts critical for interviews.",
+      "Hands-on projects to solidify understanding.",
+      "Small class sizes for personalized feedback and engagement.",
+    ],
+    modules: {
+      // 🚨 UPDATED: New 8-Week curriculum structure incorporating image topics
+      week1: [
+        { title: "Java Environment, Variables & Operators", desc: "Setup JDK/IDE. Introduction, Variables, Data Types, Operators, and Input/Scanners." },
+        { title: "Control Flow: Conditionals", desc: "Conditions, Booleans, IF/ELSE, ELSE IF, and Nested Statements." },
+      ],
+      week2: [
+        { title: "Control Flow: Loops & Arrays", desc: "For Loops, While Loops, and basic Array handling." },
+        { title: "Collections I: Lists and Sets", desc: "Introduction to Collections, Sets and Lists." },
+      ],
+      week3: [
+        { title: "Collections II: Maps & HashMaps", desc: "In-depth work with Maps, HashMaps, and examples." },
+        { title: "Introduction to Objects", desc: "Creating Classes, objects, and the 'new' keyword." },
+      ],
+      week4: [
+        { title: "Core OOP: Classes & Encapsulation", desc: "Creating Classes, defining methods, and access modifiers. Inheritance." },
+        { title: "Inheritance & Static Keyword", desc: "Extending classes, the 'super' keyword, and static members." },
+      ],
+      week5: [
+        { title: "Advanced OOP: Interfaces, Enums, & Inner Classes", desc: "Abstract classes, Interfaces, Enum types, and Inner Classes." },
+        { title: "Polymorphism & Overloading", desc: "Method Overloading and dynamic method dispatch." },
+      ],
+      week6: [
+        { title: "Exception Handling", desc: "Try-catch-finally blocks and custom exceptions." },
+        { title: "File Input/Output (I/O)", desc: "Reading from and writing to files." },
+      ],
+      week7: [
+        { title: "Mini Project: Calculator App", desc: "Build a fully functional command-line calculator app." }, // 🚨 MINI PROJECT UPDATED
+        { title: "Code Review & Refactoring", desc: "Reviewing project structure and applying best practices." },
+      ],
+      week8: [
+        { title: "Final Project Presentation", desc: "Showcase the Calculator and handle Q&A." },
+        { title: "Testing & Debugging Basics", desc: "Using the IDE debugger and writing basic JUnit tests." },
+      ],
+    },
+  },
+
+  // 🐍 NEW COURSE: PYTHON FOR DATA & SCRAPING
+  {
+    id: "python-data",
+    title: "Python for Data Analysis & Web Scraping",
+    image: "/python.png", // Assuming a Python icon image
+    maxStudents: 20,
+    description:
+      "Master Python fundamentals and use it for essential Data Analysis and Web Scraping tasks.",
+    fullDescription:
+      "Beyond development, Python is the language of data. This course focuses on practical skills: cleaning, analyzing, and visualizing data using key libraries (Pandas/Matplotlib) and collecting data from the web (Beautiful Soup/Scrapy).",
+    instructors: [
+      { name: "Yamlak N.", title: "Data Analyst & Python Instructor", image: "/yamlak.jpg" }, // 🧑‍💻 Assigned Yamlak (Python/Data Analyst)
+    ],
+    price: "2500 ETB",
+    // 🚨 UPDATED: Prerequisites (Beginner/General)
+    prerequisites: [
+      "Basic computer literacy (file management, web browser usage).", 
+      "Familiarity with spreadsheet software (Excel, Google Sheets) is helpful.",
+      "Foundational algebra and logic skills.",
+    ],
+    outcomes: [
+      "Master Python syntax, functions, and data structures.",
+      "Use Pandas to manipulate, clean, and analyze datasets.",
+      "Create visualizations using Matplotlib and Seaborn.",
+      "Collect data from websites using Beautiful Soup and Requests.",
+    ],
+    pricingPlans: [
+      { name: "Standard Access", price: "2500 ETB", features: ["12 Weeks Live Access", "Data Lab Worksheets", "Certificate of Completion"] },
+      { name: "Premium Access", price: "3500 ETB", popular: true, features: ["Standard Features", "Advanced Visualization Workshop", "Portfolio Review & Job Search Advice"] },
+    ],
+    whyPay: [
+      "Practical, job-focused skills in Python’s most valuable domains.",
+      "Direct practice with industry-standard libraries (Pandas, Matplotlib).",
+      "Guidance on building a data-focused portfolio project.",
+      "Small class sizes for personalized feedback and engagement.",
+    ],
+    modules: {
+      week1: [
+        { title: "Python Setup & Basics", desc: "Install Python/IDE. Variables, operators, and basic I/O." },
+        { title: "Data Structures", desc: "Mastering Lists, Dictionaries, Tuples, and Sets." },
+      ],
+      week2: [
+        { title: "Control Flow & Functions", desc: "Conditionals, Loops, and writing reusable functions." },
+        { title: "File Handling & Modules", desc: "Reading/writing CSVs and using standard library modules." },
+      ],
+      week3: [
+        { title: "Intro to Pandas", desc: "Loading data into DataFrames, selection, and indexing." },
+        { title: "Data Cleaning", desc: "Handling missing values, duplicates, and data transformation." },
+      ],
+      week4: [
+        { title: "Data Aggregation", desc: "Using `groupby`, pivoting, and merging DataFrames." },
+        { title: "Visualization with Matplotlib", desc: "Creating basic plots: bar charts, line graphs, and histograms." },
+      ],
+      week5: [
+        { title: "Web Scraping: Requests & HTML", desc: "Understanding HTTP, web structure, and fetching pages." },
+        { title: "Beautiful Soup", desc: "Parsing HTML and extracting specific data elements." },
+      ],
+      week6: [
+        { title: "Advanced Scraping & Data Storage", desc: "Handling pagination and storing scraped data in a database/file." },
+        { title: "Mini Project: Stock Data Analysis", desc: "Complete a project involving fetching and visualizing financial data." },
       ],
     },
   },
