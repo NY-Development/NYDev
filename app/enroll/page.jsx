@@ -347,7 +347,7 @@ export default function EnrollPage() {
                         )}
                     </button>
                     <p className="text-xs text-center text-gray-500 dark:text-gray-400 pt-2">
-                        By clicking "Proceed to Pay," you agree to our terms and conditions.
+                        By clicking <span className="font-bold">Proceed to Pay</span>, you agree to our terms and conditions.
                     </p>
                 </form>
             </div>
