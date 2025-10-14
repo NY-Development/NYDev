@@ -41,7 +41,7 @@ export default function CourseDetail() {
   const [activeTab, setActiveTab] = useState(tabs[0].id); // State for the active tab
 
   const toastClick = () => {
-    return toast.success("Enrollment isn't open yet, please await further email updates.")
+    return toast("ℹ️ Enrollment isn't open yet, please await further email updates.")
   }
 
   if (!course)
