@@ -103,7 +103,7 @@ export default function Projects() {
                     Our Portfolio of Work
                 </h1>
                 <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                    Showcasing a range of applications and enterprise systems built for speed and scalability.
+                    Showcasing a range of real world applications and systems built for speed and scalability.
                 </p>
             </div>
 
