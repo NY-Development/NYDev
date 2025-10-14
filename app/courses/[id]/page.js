@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useParams } from "next/navigation";
+import { toast } from "react-hot-toast";
 import Image from "next/image"; 
 import { 
   Clock, 
@@ -38,6 +39,10 @@ export default function CourseDetail() {
   
   const [openWeekKey, setOpenWeekKey] = useState("week1"); 
   const [activeTab, setActiveTab] = useState(tabs[0].id); // State for the active tab
+
+  const toastClick = () => {
+    return toast.success("Enrollment isn't open yet, please await further email updates.")
+  }
 
   if (!course)
     return (
@@ -208,11 +213,16 @@ export default function CourseDetail() {
               <span className="text-xl font-extrabold text-indigo-600 dark:text-indigo-400">
                 {course.price || "$TBD"}
               </span>
-              <Link 
+              {/* <Link 
               href="/enroll"
               className="cursor-pointer md:flex-grow-0 bg-indigo-600 text-white text-lg font-bold px-2 py-2 md:px-10 md:py-4 rounded-xl shadow-2xl hover:bg-indigo-700 transition-all transform active:scale-[0.98] shadow-indigo-500/50">
                 Enroll Now
-              </Link>
+              </Link> */}
+              <button 
+              onClick={toastClick}
+              className="cursor-pointer md:flex-grow-0 bg-indigo-600 text-white text-lg font-bold px-2 py-2 md:px-10 md:py-4 rounded-xl shadow-2xl hover:bg-indigo-700 transition-all transform active:scale-[0.98] shadow-indigo-500/50">
+                Enroll Now
+              </button>
             </div>
           </div>
         </div>
