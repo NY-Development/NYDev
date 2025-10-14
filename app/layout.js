@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "next-themes";
 import AuthSessionProvider from './components/AuthSessionProvider'
 import { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
 
 // Load Inter font
 const inter = Inter({
@@ -22,9 +23,10 @@ export default function RootLayout({ children }) {
                        flex flex-col overflow-y-auto no-scrollbar">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AuthSessionProvider>
-          <Toaster 
+          <ToastContainer 
             position="top-right"
             reverseOrder={false}
+            autoClose={5000}
           />
           <Navbar />
           <main className="flex-grow pt-16">{children}</main>
