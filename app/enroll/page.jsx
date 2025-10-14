@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { 
     DollarSign, 
     Loader2, 
@@ -25,6 +25,7 @@ import { courses } from '../data/courseData';
 const defaultPlan = 'Standard'; // Standard is typically the first plan in the pricingPlans array
 
 export default function EnrollPage() {
+    const router = useRouter();
     const params = useParams();
     const courseId = params?.id; 
 
@@ -53,6 +54,9 @@ export default function EnrollPage() {
         return priceMatch ? parseInt(priceMatch[1], 10) : 0;
     };
 
+    const handleClick = () => {
+        router.push('/screenshot');
+    }
     // Helper function to update course and plan details in state
     const updateCourseAndPlanDetails = (course, planName = pricingPlan) => {
         if (!course) return;
@@ -251,7 +255,8 @@ export default function EnrollPage() {
                 </div>
 
                 {/* Enrollment Form */}
-                <form onSubmit={handleSubmit} className="space-y-5">
+                {/* <form onSubmit={handleSubmit} className="space-y-5"> */}
+                <form onSubmit={handleClick} className="space-y-5">
                     
                     {/* Input Group: Name, Email, Phone, Age, University Year */}
                     <div className="space-y-5">
@@ -292,7 +297,7 @@ export default function EnrollPage() {
                             <University className="w-5 h-5 mr-2 text-indigo-500" /> Academic Information
                         </h3>
                         <InputWithIcon type="text" name="universityName" placeholder="University Name" value={form.universityName} onChange={handleChange} Icon={MapPin} required />
-                        <InputWithIcon type="text" name="department" placeholder="Department (e.g., Computer Science)" value={form.department} value={form.department} onChange={handleChange} Icon={Briefcase} required />
+                        <InputWithIcon type="text" name="department" placeholder="Department (e.g., Computer Science)" value={form.department} onChange={handleChange} Icon={Briefcase} required />
                     </div>
 
                     {/* Skill Level Radio Buttons */}

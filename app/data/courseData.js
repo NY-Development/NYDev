@@ -3,7 +3,7 @@ export const courses = [
   {
     id: "frontend-beginner",
     title: "Frontend Development for Beginners",
-    image: "/html.png",
+    image: "/courses/js.jpg",
     maxStudents: 20,
     description:
       "Start your web development journey by mastering HTML, CSS, and JavaScript from scratch.",
@@ -92,7 +92,7 @@ export const courses = [
   {
     id: "frontend-intermediate",
     title: "Frontend Intermediate – React Essentials",
-    image: "/react.png",
+    image: "/courses/react.jpg",
     maxStudents: 20,
     description:
       "Level up your frontend skills with React.js, the most popular library for building modern web apps.",
@@ -181,7 +181,7 @@ export const courses = [
   {
     id: "react-native-beginner",
     title: "React Native Mobile App Development",
-    image: "/react-native.png",
+    image: "/courses/react-native.jpg",
     maxStudents: 20,
     description:
       "Learn to build cross-platform mobile applications using React Native.",
@@ -268,7 +268,7 @@ export const courses = [
   {
     id: "backend-beginner-express",
     title: "Backend Development with Node.js & Express",
-    image: "/node.png",
+    image: "/courses/nodejs.jpg",
     maxStudents: 20,
     description:
       "Learn backend fundamentals and build REST APIs using Node.js and Express.",
@@ -355,7 +355,7 @@ export const courses = [
   {
     id: "backend-beginner-django",
     title: "Backend Development with Python & Django",
-    image: "/django.png",
+    image: "/courses/django.png",
     maxStudents: 20,
     description:
       "Learn backend development using Django, Python’s most powerful web framework.",
@@ -442,7 +442,7 @@ export const courses = [
   {
     id: "backend-php-laravel",
     title: "Backend Development with PHP & Laravel",
-    image: "/laravel.png",
+    image: "/courses/php.png",
     maxStudents: 20,
     description:
       "Master PHP backend development using the Laravel framework to build powerful web apps.",
@@ -529,7 +529,7 @@ export const courses = [
   {
     id: "java-beginner",
     title: "Java Programming for Beginners",
-    image: "/java.png", // Assuming a Java icon image
+    image: "/courses/java.png", // Assuming a Java icon image
     maxStudents: 20,
     description:
       "A strong introduction to Java, focusing on core OOP principles and industry-standard practices.",
@@ -603,7 +603,7 @@ export const courses = [
   {
     id: "python-data",
     title: "Python for Data Analysis & Web Scraping",
-    image: "/python.png", // Assuming a Python icon image
+    image: "/courses/dataAnalytics.png", // Assuming a Python icon image
     maxStudents: 20,
     description:
       "Master Python fundamentals and use it for essential Data Analysis and Web Scraping tasks.",
