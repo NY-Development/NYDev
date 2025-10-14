@@ -32,14 +32,15 @@ export default function CareersPage() {
           <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:border-indigo-400/50">
             <div className="flex justify-between items-start mb-3">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Frontend Developer (React/Next.js)</h3>
-                <JobStatusBadge isUrgent={true}>Urgent</JobStatusBadge>
+                <JobStatusBadge isUrgent={true}>Closed</JobStatusBadge>
             </div>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
               Build dynamic, accessible user interfaces using modern frameworks, TypeScript, and Tailwind CSS. Focus on performance and user experience.
             </p>
             <a 
-              href="mailto:careers@nydev.tech?subject=Application:%20Frontend%20Developer"
-              className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition shadow-md"
+              // href="mailto:careers@nydev.tech?subject=Application:%20Frontend%20Developer"
+              href="#"
+              className="cursor-not-allowed inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition shadow-md"
             >
               <Send className="w-5 h-5" /> Apply Now
             </a>
@@ -49,14 +50,15 @@ export default function CareersPage() {
           <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:border-indigo-400/50">
             <div className="flex justify-between items-start mb-3">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Backend Developer (Node/Django)</h3>
-                <JobStatusBadge isUrgent={false}>Open</JobStatusBadge>
+                <JobStatusBadge isUrgent={false}>Opening Soon</JobStatusBadge>
             </div>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
               Design and implement scalable backend systems and secure, high-performance APIs for new and existing digital products.
             </p>
             <a 
-              href="mailto:careers@nydev.tech?subject=Application:%20Backend%20Developer"
-              className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition shadow-md"
+              // href="mailto:careers@nydev.tech?subject=Application:%20Backend%20Developer"
+              href="#"
+              className="cursor-not-allowed inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition shadow-md"
             >
               <Send className="w-5 h-5" /> Apply Now
             </a>
