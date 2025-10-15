@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import AuthSessionProvider from './components/AuthSessionProvider'
 import { Toaster } from "react-hot-toast";
 import { ToastContainer } from "react-toastify";
+import {Analytics} from '@vercel/analytics/next'
 
 // Load Inter font
 const inter = Inter({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
           />
           <Navbar />
           <main className="flex-grow pt-16">{children}</main>
+          <Analytics />
           <Footer />
           </AuthSessionProvider>
         </ThemeProvider>
