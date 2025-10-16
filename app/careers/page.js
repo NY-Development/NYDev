@@ -1,5 +1,6 @@
 "use client";
 import { Briefcase, Send } from "lucide-react";
+import { toast } from "react-toastify";
 
 // Helper component for job card status (e.g., New, Urgent)
 const JobStatusBadge = ({ children, isUrgent = false }) => (
@@ -11,6 +12,10 @@ const JobStatusBadge = ({ children, isUrgent = false }) => (
         {children}
     </span>
 );
+
+const handleClick = () => {
+  return toast.info("Application is closed right now.");
+}
 
 export default function CareersPage() {
   return (
@@ -42,7 +47,7 @@ export default function CareersPage() {
               href="#"
               className="cursor-not-allowed inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition shadow-md"
             >
-              <Send className="w-5 h-5" /> Apply Now
+              <Send className="w-5 h-5" onClick={handleClick}/> Apply Now
             </a>
           </div>
 

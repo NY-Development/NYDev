@@ -1,4 +1,5 @@
 "use client";
+import { toast } from "react-toastify";
 import HighlightCard from "../components/HighlightCard";
 import { motion } from "framer-motion";
 
@@ -29,6 +30,10 @@ const highlights = [
     isNew: false,
   },
 ];
+
+const handleClick = () => {
+  return toast.info("Opening Soon")
+}
 
 export default function UpdatesPage() {
   return (
