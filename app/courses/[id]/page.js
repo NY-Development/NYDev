@@ -42,7 +42,8 @@ export default function CourseDetail() {
   const [activeTab, setActiveTab] = useState(tabs[0].id); // State for the active tab
 
   const toastClick = () => {
-    return toast.info("Enrollment isn't open yet, please await further email updates.")
+    // return toast.info("Enrollment isn't open yet, please await further email updates.")
+    return window.location.href = 'https://forms.gle/cprK1xmsNRuACe387';
   }
 
   if (!course)
