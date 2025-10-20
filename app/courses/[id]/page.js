@@ -176,7 +176,7 @@ export default function CourseDetail() {
               src={course.image}
               alt={course.title}
               fill={true}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-64"
               sizes="(max-width: 1024px) 100vw, 33vw"
               priority
             />
@@ -184,7 +184,7 @@ export default function CourseDetail() {
 
           {/* Details */}
           <div className="lg:col-span-2 space-y-5">
-            <h1 className="text-5xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight">
+            <h1 className="max-sm:text-2xl text-5xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight">
               {course.title}
             </h1>
             <p className="text-xl text-indigo-600 dark:text-indigo-400 font-semibold italic">
