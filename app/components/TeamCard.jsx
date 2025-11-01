@@ -1,11 +1,12 @@
 import Image from "next/image";
 // Import social icons from Lucide
-import { Linkedin, Github, Instagram, Twitter, Facebook, Send, Link as LinkIcon } from "lucide-react";
+import { Linkedin, Github, Instagram, Twitter, Facebook, Send, Link as LinkIcon, Youtube } from "lucide-react";
 
 // Define a map for icons and their components
 const socialIcons = {
   linkedin: Linkedin,
   github: Github,
+  YouTube: Youtube,
   instagram: Instagram,
   x: Twitter, // Using X for Twitter
   facebook: Facebook,

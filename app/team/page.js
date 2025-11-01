@@ -37,6 +37,17 @@ const team = [
       // website: "https://nydevofficial.vercel.app",
     },
   },
+  {
+    name: "Bereket Tesfaye",
+    role: "Video Editor",
+    image: "/team/bereket.jpg", // Assuming an image file named bereket.jpg
+    desc: "Creative video editor with a keen eye for detail and a passion for storytelling through film. Experienced in crafting engaging visual narratives that resonate with audiences.",
+    links: {
+      YouTube: "https://www.youtube.com/@beki_1210", // Placeholder
+      telegram: "https://t.me/Bekaceo", // Placeholder
+      // Add other links as needed
+    },
+  },
 //   {
 //     name: "Beliul Tilahun",
 //     role: "Cyber Security Specialist",
