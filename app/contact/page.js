@@ -29,7 +29,7 @@ export default function Contact() {
             Icon={Mail} 
             title="Email Us" 
             text="yamlaknegash96@gmail.com" 
-            link="mailto:yamlaknegash96@gmail.com"
+            link="mailto:nydevofficial@gmail.com"
           />
           <ContactDetail 
             Icon={Phone} 
@@ -46,7 +46,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form Column */}
-        <form className="space-y-6 p-8 rounded-2xl 
+        <form action={`mailto:nydevofficial@gmail.com`} className="space-y-6 p-8 rounded-2xl 
                         dark:bg-gray-850 
                          shadow-2xl shadow-gray-200/50 dark:shadow-indigo-900/10"
         >

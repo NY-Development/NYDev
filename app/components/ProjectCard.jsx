@@ -11,7 +11,14 @@ const StatusBadge = ({ isDone }) => {
         Done
       </span>
     );
-  } else {
+  } 
+  else if(isDone === 'testing'){
+    return (
+      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+        Testing Phase
+      </span>
+    );
+  }else {
     return (
       <span className="text-xs font-semibold px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-300">
         In Progress

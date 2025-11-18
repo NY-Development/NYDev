@@ -2,6 +2,42 @@ import TeamCard from "../components/TeamCard";
 
 const team = [
   {
+    name: "Yadeni Lemma",
+    role: "Aspiring Frontend Developerr",
+    image: "/team/yadeni.jpg", // Assuming an image file named sana.jpg
+    desc: "Frontend Engineer specializing in React, experienced in building dynamic, responsive web applications with clean and maintainable code. Skilled in creating interactive user interfaces and optimizing user experiences for modern web projects.",
+    links: {
+//       github: "https://github.com/natnael-eyuel-dev", // Placeholder
+      telegram: "https://t.me/Yd_002", // Placeholder
+      instagram: "https://www.instagram.com/Yd_002",
+      linkedin: "https://www.linkedin.com/in/yadeni-lemma-2a0b3130b/",
+    },
+  },
+  {
+    name: "Natnael Eyuel",
+    role: "AI/ML Engineer & Full Stack Developer",
+    image: "/team/nati.jpg", // Assuming an image file named sana.jpg
+    desc: "Full-stack developer and AI Engineer who builds scalable web apps using Vue.js and NestJS, with strong skills in TypeScript, REST APIs, and clean architecture.",
+    links: {
+      github: "https://github.com/natnael-eyuel-dev", // Placeholder
+      telegram: "https://t.me/NatnaelEyuel", // Placeholder
+//       website: "https://abiy.dev",
+//       linkedin: "https://www.linkedin.com/in/abiy-hailu-a780b9294/",
+    },
+  },
+  {
+    name: "Abiy Hailu",
+    role: "Full stack developer",
+    image: "/team/abiy.jpeg", // Assuming an image file named sana.jpg
+    desc: "Full-stack developer who builds scalable web apps using Vue.js and NestJS, with strong skills in TypeScript, REST APIs, and clean architecture.",
+    links: {
+      github: "https://x.com/Ethiopian__Soul", // Placeholder
+      telegram: "https://t.me/skythrill2", // Placeholder
+      website: "https://abiy.dev",
+      linkedin: "https://www.linkedin.com/in/abiy-hailu-a780b9294/",
+    },
+  },
+  {
     name: "Sana Matusala",
     role: "React Instructor",
     image: "/team/sana.jpg", // Assuming an image file named sana.jpg

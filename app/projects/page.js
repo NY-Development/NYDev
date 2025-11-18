@@ -44,10 +44,10 @@ const projects = [
     title: "Adama Bakery & Cake", 
     desc: "A modern bakery website showcasing products, online orders, and delivery tracking for customers.", 
     image: "/projects/abc.jpg",
-    link: "https://abc.vercel.app",
+    link: "https://adama-bakery.vercel.app",
     techTags: ["Next.js", "Tailwind CSS", "Stripe", "React"],
     category: ["Web Development", "UI/UX Design"], 
-    isDone: false,
+    isDone: 'testing',
   },
 ];
 

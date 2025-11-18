@@ -11,7 +11,7 @@ const socialIcons = {
   x: Twitter, // Using X for Twitter
   facebook: Facebook,
   telegram: Send, // Using Send icon for Telegram
-  website: LinkIcon, // Using LinkIcon for portfolio/website
+  website: LinkIcon,
 };
 
 // Interface for the links object (optional)
