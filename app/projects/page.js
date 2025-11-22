@@ -13,7 +13,7 @@ const projects = [
     desc: "A healthcare workflow notifier that ensures timely alerts for procedures, improving efficiency and patient care.", 
     image: "/procedure.jpg",
     link: "https://pn-jet.vercel.app",
-    techTags: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+    techTags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     // 🚨 UPDATED: Added "Mobile App" category
     category: ["Backend & API", "Software Solutions", "Mobile App"], 
     isDone: true, 
@@ -24,7 +24,7 @@ const projects = [
     desc: "A custom real-time system for hospital administration, providing complete bed assignment and patient flow management.", 
     image: "/project2.png",
     link: "https://bnst-beta.vercel.app",
-    techTags: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
+    techTags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     // 🚨 UPDATED: Added "Mobile App" category
     category: ["Web Development", "Backend & API", "Software Solutions", "Mobile App"], 
     isDone: true,
@@ -35,7 +35,7 @@ const projects = [
     desc: "A comprehensive job posting and hiring web application featuring advanced filtering and candidate matching algorithms.", 
     image: "/project3.png",
     link: "https://js-kk9h.onrender.com",
-    techTags: ["Next.js", "GraphQL", "PostgreSQL", "Tailwind CSS"],
+    techTags: ["React.js", "Expressjs", "MongoDB", "Tailwind CSS"],
     category: ["Web Development", "Backend & API"], 
     isDone: true,
   },
@@ -45,9 +45,19 @@ const projects = [
     desc: "A modern bakery website showcasing products, online orders, and delivery tracking for customers.", 
     image: "/projects/abc.jpg",
     link: "https://adama-bakery.vercel.app",
-    techTags: ["Next.js", "Tailwind CSS", "Stripe", "React"],
+    techTags: ["React.js", "Tailwind CSS", "Tailwindcss", "Expressjs"],
     category: ["Web Development", "UI/UX Design"], 
     isDone: 'testing',
+  },
+  { 
+    id: 5, 
+    title: "North Nazareth Meserete Kirstos Church | NNMKC", 
+    desc: "The NNMKC (North Nazareth Meserete Kristos Church) digital platform is a full-scale web application designed to modernize and extend the ministry, communication, and service reach of the church located in Adama, Ethiopia. The project provides a centralized online presence where members—both local and international—can easily access sermons, ministries, events, announcements, and donation services.", 
+    image: "/projects/nnmkc.jpg",
+    link: "https://mkc-adama.vercel.app",
+    techTags: ["React.js", "ChakraUI", "Nestjs", "PostgreSQL"],
+    category: ["Web Development", "Backend & API"], 
+    isDone: false,
   },
 ];
 

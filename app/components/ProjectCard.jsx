@@ -67,7 +67,7 @@ export default function ProjectCard({ title, desc, image, link = "#", isDone = f
       {/* Content Area - Removed 'relative' from here as the badge is no longer here */}
       <div className="relative p-6 space-y-3">
         {/* Title */}
-        <h3 className={`text-xl font-bold 
+        <h3 className={`line-clamp-1 text-xl font-bold 
                          text-gray-900 dark:text-gray-100 
                          transition-colors
                          ${isDone ? 'group-hover:text-indigo-600 dark:group-hover:text-indigo-400' : ''}`}
@@ -76,7 +76,7 @@ export default function ProjectCard({ title, desc, image, link = "#", isDone = f
         </h3>
         
         {/* Description */}
-        <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p className="line-clamp-3 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
           {desc}
         </p>
 
