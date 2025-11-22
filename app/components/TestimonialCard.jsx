@@ -45,7 +45,7 @@ export default function TestimonialCard({ name, title, feedback, avatar = "/avat
         {/* Quote icon for visual flair */}
         <Quote className="w-6 h-6 text-indigo-500 dark:text-indigo-400 opacity-70 mb-2" aria-hidden="true"/>
         
-        <blockquote className="text-base text-gray-700 dark:text-gray-300 leading-relaxed italic">
+        <blockquote className="line-clamp-6 text-base text-gray-700 dark:text-gray-300 leading-relaxed italic">
           "{feedback}"
         </blockquote>
       </div>
