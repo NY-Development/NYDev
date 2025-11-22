@@ -42,13 +42,13 @@ export default function TeamCard({ name, role, image, desc, links = {} }) {
       </div>
 
       {/* ----------------- Text Section ----------------- */}
-      <h3 className="text-2xl font-extrabold text-gray-900 dark:text-gray-100 mt-2">
+      <h3 className="line-clamp-1 text-2xl font-extrabold text-gray-900 dark:text-gray-100 mt-2">
         {name}
       </h3>
-      <p className="text-base font-semibold text-indigo-600 dark:text-indigo-400 mb-3">
+      <p className="line-clamp-1 text-base font-semibold text-indigo-600 dark:text-indigo-400 mb-3">
         {role}
       </p>
-      <p className="mt-2 text-sm text-gray-700 dark:text-gray-300 mb-6">
+      <p className="line-clamp-3 mt-2 text-sm text-gray-700 dark:text-gray-300 mb-6">
         {desc}
       </p>
 
