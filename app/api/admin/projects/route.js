@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import connectDB from "@/lib/mongodb";
-import Project from "@/models/Project";
+import Project from "../../../models/Project";
 
 export async function POST(req) {
   const session = await getServerSession(authOptions);

@@ -1,6 +1,6 @@
 import connectDB from "@/lib/mongodb";
 import InviteLink from "@/models/InviteLink";
-import Member from "@/models/Member";
+import Member from "../../../models/Member";
 
 export async function POST(req) {
   await connectDB();
