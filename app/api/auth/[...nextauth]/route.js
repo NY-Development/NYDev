@@ -1,41 +1,61 @@
-// Example using the App Router structure: /app/api/auth/[...nextauth]/route.js
+import NextAuth from "next-auth";
+import Credentials from "next-auth/providers/credentials";
 
-import NextAuth from "next-auth"
-import GoogleProvider from "next-auth/providers/google"
+export const authOptions = {
+  session: {
+    strategy: "jwt",
+  },
 
-const handler = NextAuth({
   providers: [
-    GoogleProvider({
-      // You must get these from Google Developer Console
-      clientId: process.env.GOOGLE_CLIENT_ID, 
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    Credentials({
+      name: "Credentials",
+
+      credentials: {
+        email: { label: "Email", type: "email", placeholder: "admin@example.com" },
+        password: { label: "Password", type: "password" },
+      },
+
+      async authorize(credentials) {
+        const adminEmail = process.env.ADMIN_EMAIL;
+        const adminPassword = process.env.ADMIN_PASSWORD;
+
+        if (
+          credentials.email === adminEmail &&
+          credentials.password === adminPassword
+        ) {
+          return {
+            id: "admin-1",
+            name: "Admin",
+            email: adminEmail,
+            role: "admin",
+          };
+        }
+
+        return null; // ❌ Login failed
+      },
     }),
   ],
-  callbacks: {
-    async signIn({ user, account, profile }) {
-      const allowedEmails = ['yamlaknegash96@gmail.com'];
-      
-      // Allow sign-in only if the user's email is in the allowed list
-      if (allowedEmails.includes(user.email)) {
-        return true
-      } else {
-        // Return false to prevent sign-in and redirect to an error page
-        return '/unauthorized' 
-      }
-    },
-    // Session callback to ensure the session only exists for authorized users
-    async session({ session, token, user }) {
-        if (!session.user.email || !allowedEmails.includes(session.user.email)) {
-            return null; // Don't return a session if email is not allowed
-        }
-        return session
-    }
-  },
-  // Define custom pages for sign-in, sign-out, etc.
-  pages: {
-    signIn: '/admin/login', 
-    error: '/admin/unauthorized',
-  }
-})
 
-export { handler as GET, handler as POST }
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.role = user.role;
+      }
+      return token;
+    },
+
+    async session({ session, token }) {
+      session.user.role = token.role;
+      return session;
+    },
+  },
+
+  pages: {
+    signIn: "/login", // You will create a login page
+  },
+
+  secret: process.env.NEXTAUTH_SECRET,
+};
+
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };

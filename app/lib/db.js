@@ -1,23 +1,20 @@
-
 import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI) throw new Error("MONGODB_URI not defined");
-
-let cached = global.mongoose;
-
-if (!cached) cached = global.mongoose = { conn: null, promise: null };
-
-async function connect() {
-  if (cached.conn) return cached.conn;
-  if (!cached.promise) {
-    cached.promise = mongoose.connect(MONGODB_URI, {
-      // options
-    }).then((mongoose) => mongoose);
-  }
-  cached.conn = await cached.promise;
-  return cached.conn;
+if (!MONGODB_URI) {
+  throw new Error("❌ Please add MONGODB_URI to .env");
 }
 
-export default connect;
+let isConnected = false;
+
+export default async function connectDB() {
+  if (isConnected) return;
+
+  const db = await mongoose.connect(MONGODB_URI, {
+    dbName: "NYDev",
+  });
+
+  isConnected = db.connections[0].readyState === 1;
+  console.log("✅ MongoDB Connected");
+}
