@@ -12,7 +12,7 @@ export default async function connectDB() {
   if (isConnected) return;
 
   const db = await mongoose.connect(MONGODB_URI, {
-    dbName: "NYDev",
+    dbName: "NYDEV",
   });
 
   isConnected = db.connections[0].readyState === 1;
