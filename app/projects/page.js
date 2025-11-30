@@ -59,6 +59,16 @@ const projects = [
     category: ["Web Development", "Backend & API"], 
     isDone: false,
   },
+  { 
+    id: 6, 
+    title: "TG Mart Online Store", 
+    desc: "A modern and user-friendly eCommerce platform where customers can effortlessly browse products, compare options, and make secure purchases. Designed with a clean interface and smooth navigation, it provides a fast, reliable, and enjoyable shopping experience for users on any device.", 
+    image: "/projects/tgmart.png",
+    link: "https://sm-store-phi.vercel.app",
+    techTags: ["React.js", "Tailwindcss", "Django", "PostgreSQL", "Python"],
+    category: ["Web Development", "Backend & API"], 
+    isDone: false,
+  },
 ];
 
 // -----------------------------------------------------------------------------
