@@ -1,5 +1,5 @@
-import connectDB from "@/lib/mongodb";
-import Enrollment from "../../../models/Enrollment";
+import connectDB from "../../lib/db";
+import Enrollment from "../../models/Enrollment";
 import axios from "axios";
 
 export async function POST(req) {

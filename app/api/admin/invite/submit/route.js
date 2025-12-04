@@ -1,6 +1,6 @@
 import connectDB from "../../../../lib/db";
 import InviteToken from "../../../../models/InviteToken";
-import Member from "../../../models/Member";
+import Member from "../../../../models/Member";
 
 export async function POST(req) {
   await connectDB();
