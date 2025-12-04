@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "next-themes";
 import AuthSessionProvider from './components/AuthSessionProvider'
-import { Toaster } from "react-hot-toast";
 import { ToastContainer } from "react-toastify";
 import {Analytics} from '@vercel/analytics/next'
 
@@ -27,7 +26,7 @@ export default function RootLayout({ children }) {
           <ToastContainer 
             position="top-right"
             reverseOrder={false}
-            autoClose={5000}
+            autoClose={3000}
           />
           <Navbar />
           <main className="flex-grow pt-16">{children}</main>

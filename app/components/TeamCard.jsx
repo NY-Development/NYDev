@@ -1,8 +1,6 @@
 import Image from "next/image";
-// Import social icons from Lucide
 import { Linkedin, Github, Instagram, Twitter, Facebook, Send, Link as LinkIcon, Youtube } from "lucide-react";
 
-// Define a map for icons and their components
 const socialIcons = {
   linkedin: Linkedin,
   github: Github,
@@ -14,8 +12,6 @@ const socialIcons = {
   website: LinkIcon,
 };
 
-// Interface for the links object (optional)
-// Example: { linkedin: "...", github: "...", website: "..." }
 export default function TeamCard({ name, role, image, desc, links = {} }) {
   
   // Filter for only valid links to render

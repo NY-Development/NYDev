@@ -1,12 +1,12 @@
-import connectDB from "@/lib/mongodb";
-import InviteLink from "@/models/InviteLink";
+import connectDB from "../../../../lib/db";
+import InviteToken from "../../../../models/InviteToken";
 import Member from "../../../models/Member";
 
 export async function POST(req) {
   await connectDB();
   const { token, ...memberData } = await req.json();
 
-  const invite = await InviteLink.findOne({ token });
+  const invite = await InviteToken.findOne({ token });
 
   if (!invite || invite.used || invite.expiresAt < new Date()) {
     return new Response(JSON.stringify({ error: "Invalid or expired link" }), { status: 400 });

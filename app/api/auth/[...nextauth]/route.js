@@ -51,7 +51,7 @@ export const authOptions = {
   },
 
   pages: {
-    signIn: "/login", // You will create a login page
+    signIn: "/adlogin",
   },
 
   secret: process.env.NEXTAUTH_SECRET,

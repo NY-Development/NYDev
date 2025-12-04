@@ -1,9 +1,10 @@
+""
 import TeamCard from "../components/TeamCard";
 
 const team = [
   {
     name: "Yadeni Lemma",
-    role: "Aspiring Frontend Developerr",
+    role: "Aspiring Frontend Developer",
     image: "/team/yadeni.jpg", // Assuming an image file named sana.jpg
     desc: "Frontend Engineer specializing in React, experienced in building dynamic, responsive web applications with clean and maintainable code. Skilled in creating interactive user interfaces and optimizing user experiences for modern web projects.",
     links: {
@@ -122,3 +123,31 @@ export default function Team() {
     </div>
   );
 }
+// "use client";
+// import { useEffect, useState } from "react";
+// import TeamCard from "../components/TeamCard";
+
+// export default function Team() {
+//   const [members, setMembers] = useState([]);
+
+//   useEffect(() => {
+//     async function loadMembers() {
+//       const res = await fetch("/api/members");
+//       const data = await res.json();
+//       setMembers(data.members);
+//     }
+//     loadMembers();
+//   }, []);
+
+//   return (
+//     <div className="max-w-6xl mx-auto py-20 px-6">
+//       <h1 className="text-4xl font-bold mb-12 text-center">Meet Our Team</h1>
+
+//       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+//         {members.map((member) => (
+//           <TeamCard key={member._id} {...member} />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }

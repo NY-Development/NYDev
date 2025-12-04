@@ -13,6 +13,7 @@ export default async function connectDB() {
 
   const db = await mongoose.connect(MONGODB_URI, {
     dbName: "NYDEV",
+    connectTimeoutMS: 10000,
   });
 
   isConnected = db.connections[0].readyState === 1;

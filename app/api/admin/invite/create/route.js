@@ -1,8 +1,8 @@
 import crypto from "crypto";
-import connectDB from "@/lib/mongodb";
-import InviteLink from "@/models/InviteLink";
+import connectDB from "../../../../lib/db";
+import InviteToken from "../../../../models/InviteToken";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "../../../auth/[...nextauth]/route";
 
 export async function POST() {
   const session = await getServerSession(authOptions);
@@ -13,7 +13,7 @@ export async function POST() {
 
   const token = crypto.randomBytes(20).toString("hex");
 
-  const invite = await InviteLink.create({
+  const invite = await InviteToken.create({
     token,
     expiresAt: new Date(Date.now() + 1000 * 60 * 60), // 1 hour
   });

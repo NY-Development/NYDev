@@ -1,4 +1,4 @@
-"use client"; // Must be a client component for interactivity (useState)
+"use client";
 
 import { useState } from 'react';
 import ProjectCard from "../components/ProjectCard";
@@ -14,7 +14,6 @@ const projects = [
     image: "/procedure.jpg",
     link: "https://pn-jet.vercel.app",
     techTags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    // 🚨 UPDATED: Added "Mobile App" category
     category: ["Backend & API", "Software Solutions", "Mobile App"], 
     isDone: true, 
   },
@@ -25,7 +24,6 @@ const projects = [
     image: "/project2.png",
     link: "https://bnst-beta.vercel.app",
     techTags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    // 🚨 UPDATED: Added "Mobile App" category
     category: ["Web Development", "Backend & API", "Software Solutions", "Mobile App"], 
     isDone: true,
   },
