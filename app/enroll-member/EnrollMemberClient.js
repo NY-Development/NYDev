@@ -223,7 +223,7 @@ export default function EnrollMemberClient() {
             <button
               type="submit"
               disabled={status.loading}
-              className="w-full bg-blue-600 hover:bg-blue-700 transition p-3 rounded-md text-white font-bold disabled:opacity-50"
+              className="cp w-full bg-blue-600 hover:bg-blue-700 transition p-3 rounded-md text-white font-bold disabled:opacity-50"
             >
               {status.loading ? "Submitting..." : "Submit Enrollment"}
             </button>

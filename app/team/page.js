@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import TeamCard from "../components/TeamCard";
 import { Users } from "lucide-react";
+import { team } from "../utils/Team";
 
 export default function Team() {
   const [members, setMembers] = useState([]);
@@ -20,7 +21,6 @@ export default function Team() {
         setLoading(false);
       }
     }
-
     loadMembers();
   }, []);
 
@@ -40,7 +40,7 @@ export default function Team() {
   /* ----------------------------------
      Empty State
   ----------------------------------- */
-  if (members.length === 0) {
+  if (members.length === 0 && team.length === 0) {
     return (
       <div className="max-w-6xl mx-auto py-32 px-6 text-center">
         <div
@@ -83,7 +83,7 @@ export default function Team() {
       </h1>
 
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {members.map((member) => (
+        {members.length ? members.map((member) => (
           <TeamCard
             key={member._id}
             name={member.name}
@@ -92,7 +92,18 @@ export default function Team() {
             image={member.photoUrl || "/avatar-placeholder.png"}
             links={member.links}
           />
-        ))}
+        )) : (
+          team.map((t, i) => (
+            <TeamCard
+              key={t.name}
+              name={t.name}
+              role={t.role}
+              desc={t.desc}
+              image={t.image || "/avatar-placeholder.png"}
+              links={t.links}
+            />
+          ))
+        )}
       </div>
     </div>
   );
