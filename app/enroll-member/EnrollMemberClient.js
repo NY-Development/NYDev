@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import SocialInput from "../components/SocialInput";
 import {SOCIAL_PLATFORMS} from "../data/courseData";
 import { generateSocialLinks } from "../utils/generateLinks";
+import Image from "next/image";
 
 export default function EnrollMemberClient() {
   const searchParams = useSearchParams();
@@ -211,7 +212,7 @@ export default function EnrollMemberClient() {
                 className="text-sm"
               />
               {preview && (
-                <img
+                <Image
                   src={preview}
                   alt="Preview"
                   className="w-28 h-28 rounded-full mt-3 object-cover border"
