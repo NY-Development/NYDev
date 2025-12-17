@@ -1,7 +1,7 @@
 
 
-import connectDB from "../../../../../../lib/db";
-import Member from "../../../../../../models/Member";
+import connectDB from "../../../../lib/db";
+import Member from "../../../../models/Member";
 
 const socialKeys = [
   "linkedin",
