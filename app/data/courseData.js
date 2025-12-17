@@ -663,3 +663,41 @@ export const courses = [
     },
   },
 ];
+
+export const SOCIAL_PLATFORMS = {
+  telegram: {
+    label: "Telegram",
+    baseUrl: "https://t.me/",
+    placeholder: "telegram_username",
+  },
+  instagram: {
+    label: "Instagram",
+    baseUrl: "https://instagram.com/",
+    placeholder: "instagram_username",
+  },
+  youtube: {
+    label: "YouTube",
+    baseUrl: "https://youtube.com/",
+    placeholder: "youtube_channel",
+  },
+  x: {
+    label: "X (Twitter)",
+    baseUrl: "https://x.com/",
+    placeholder: "x_username",
+  },
+  github: {
+    label: "GitHub",
+    baseUrl: "https://github.com/",
+    placeholder: "github_username",
+  },
+  linkedin: {
+    label: "LinkedIn",
+    baseUrl: "https://linkedin.com/in/",
+    placeholder: "linkedin_username",
+  },
+  facebook: {
+    label: "Facebook",
+    baseUrl: "https://facebook.com/",
+    placeholder: "facebook_username",
+  },
+};

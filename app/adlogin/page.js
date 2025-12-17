@@ -34,8 +34,8 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-700">
-      <div className="bg-gray-900 shadow-xl p-10 rounded-xl w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="bg-gray-900 shadow-xl p-10 rounded-xl w-full max-w-md border-2 border-indigo-500">
 
         <h2 className="text-2xl font-bold text-center mb-6">Admin Login</h2>
 
@@ -75,7 +75,7 @@ export default function AdminLoginPage() {
 
           <button
             type="submit"
-            className="cp w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-md"
+            className="cp w-full bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-md"
           >
             Login
           </button>
