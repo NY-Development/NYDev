@@ -82,6 +82,18 @@ export const team = [
       // Add other links as needed
     },
   },
+  {
+    name: "Yitbarek Alemu",
+    role: "Mobile Developer | Flutter Enthusiast",
+    image: "/team/yitbarek.jpg", // Assuming an image file named bereket.jpg
+    desc: "Focused mobile developer specializing in creating intuitive, high-performance mobile applications. Experienced in building apps across a wide range of mobile technologies, with Flutter as the primary framework. Values clean architecture, thoughtful design, and continuous learning to stay ahead in mobile development.",
+    links: {
+      telegram: "https://t.me/Jackult",
+      github: "https://github.com/jaeckult",
+      linkedin: "https://www.linkedin.com/in/yitbarek-alemu-23ab6826b/",
+      leetcode: "https://leetcode.com/u/jaeckult/",
+    },
+  },
 //   {
 //     name: "Beliul Tilahun",
 //     role: "Cyber Security Specialist",

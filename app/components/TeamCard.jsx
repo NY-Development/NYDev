@@ -8,6 +8,7 @@ import {
   Send,
   Link as LinkIcon,
   Youtube,
+  CodeXml,
 } from "lucide-react";
 
 /* -------------------------------------------------
@@ -22,6 +23,7 @@ const socialIcons = {
   facebook: Facebook,
   telegram: Send,
   website: LinkIcon,
+  leetcode: CodeXml,
 };
 
 /* -------------------------------------------------
@@ -36,6 +38,7 @@ const SOCIAL_ORDER = [
   "x",
   "facebook",
   "telegram",
+  "leetcode"
 ];
 
 /* -------------------------------------------------
