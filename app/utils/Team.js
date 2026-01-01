@@ -105,6 +105,7 @@ export const team = [
 //       // Add other links as needed
 //     },
 //   },
+
 //   {
 //     name: "Nafargi Damena",
 //     role: "Frontend Engineer & Digital Marketer",

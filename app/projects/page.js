@@ -49,6 +49,24 @@ const projects = [
   },
   { 
     id: 5, 
+    title: "AddisPet", 
+    desc: "A premium pet care and adoption ecosystem tailored for the Ethiopian market. Features a fluid, motion-driven marketplace for pet supplies and a secure portal for animal adoption. Built with a focus on high-performance UX, real-time filtering, and secure Google authentication to foster a trusted local pet community.", 
+    image: "/projects/addispet.png",
+    link: "https://addispet.vercel.app",
+    techTags: [
+        "Next.js", 
+        "TypeScript", 
+        "Tailwind CSS", 
+        "Framer Motion", 
+        "MongoDB", 
+        "Google OAuth", 
+        "Express.js"
+    ],
+    category: ["Full Stack Development", "UI/UX Design"], 
+    isDone: true,
+  },
+  { 
+    id: 6, 
     title: "North Nazareth Meserete Kirstos Church | NNMKC", 
     desc: "The NNMKC (North Nazareth Meserete Kristos Church) digital platform is a full-scale web application designed to modernize and extend the ministry, communication, and service reach of the church located in Adama, Ethiopia. The project provides a centralized online presence where members—both local and international—can easily access sermons, ministries, events, announcements, and donation services.", 
     image: "/projects/nnmkc.jpg",
@@ -58,7 +76,7 @@ const projects = [
     isDone: false,
   },
   { 
-    id: 6, 
+    id: 7, 
     title: "TG Mart Online Store", 
     desc: "A modern and user-friendly eCommerce platform where customers can effortlessly browse products, compare options, and make secure purchases. Designed with a clean interface and smooth navigation, it provides a fast, reliable, and enjoyable shopping experience for users on any device.", 
     image: "/projects/tgmart.png",
