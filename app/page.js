@@ -1,8 +1,8 @@
-"use client";
 import Link from "next/link";
 import { Award, Zap, Users, Globe, Smartphone, Palette } from "lucide-react";
-import HighlightCard from "./components/HighlightCard";
 import Image from "next/image";
+import Spline from "@splinetool/react-spline/next";
+
 // -----------------------------------------------------------------------------
 // 🔹 Reusable Component: ValueCard
 // -----------------------------------------------------------------------------
@@ -44,7 +44,7 @@ const services = [
     image: "/services/design.jpg",
     link: "/projects",
   },
-]
+];
 
 // -----------------------------------------------------------------------------
 // 🔹 Main Home Page Component
@@ -59,20 +59,18 @@ export default function Home() {
         className="relative flex flex-col items-center justify-center pt-24 min-h-[calc(100vh-64px)] text-center px-6 sm:px-10"
         aria-label="NY Development Introduction"
       >
-        <div
-          className="absolute inset-0 z-0 opacity-10 dark:opacity-20 transition-opacity duration-500"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 50% 50%, var(--tw-color-indigo-500) 0%, transparent 70%)",
-          }}
-        ></div>
+        {/* Spline Background */}
+        <Spline
+          scene="https://prod.spline.design/3Oo3QTO-boiZER69/scene.splinecode"
+          className="absolute inset-0 z-0 min-h-full min-w-full"
+        />
 
         <div className="z-10 max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 text-gray-900 dark:text-gray-50 leading-tight">
-            We Build <span className="text-indigo-600 dark:text-indigo-400">Digital</span> Excellence
+          <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 text-gray-900 dark:text-gray-950 leading-tight">
+            We Build <span className="text-blue-600 dark:text-black">Digital</span> Excellence
           </h1>
 
-          <p className="mt-6 text-xl md:text-2xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300 font-light">
+          <p className="mt-6 text-xl md:text-2xl max-w-3xl mx-auto text-gray-900 dark:text-gray-900 font-light">
             Innovative web and mobile solutions to drive your business forward, crafted by the dedicated team at{" "}
             <strong className="font-extrabold">NYDev</strong>.
           </p>
@@ -87,7 +85,7 @@ export default function Home() {
 
             <Link
               href="/projects"
-              className="inline-block px-10 py-4 text-lg border border-gray-300 dark:border-gray-700 rounded-xl text-indigo-600 dark:text-indigo-400 font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
+              className="inline-block px-10 py-4 text-lg border border-gray-300 dark:border-gray-700 rounded-xl text-slate-600 dark:text-slate-900 dark:hover:text-white font-medium hover:bg-gray-100 dark:hover:bg-black transition-colors duration-300"
             >
               See Our Work →
             </Link>
@@ -114,7 +112,6 @@ export default function Home() {
               key={index}
               className="group flex flex-col rounded-xl bg-white dark:bg-gray-900 shadow-2xl dark:shadow-2xl dark:shadow-black/60 overflow-hidden transition-all duration-300 transform hover:scale-[1.01] hover:shadow-indigo-500/30 dark:hover:shadow-indigo-500/30"
             >
-              
               {/* Image & Icon Overlay */}
               <div className="relative w-full h-48">
                 {/* Next.js Image Component */}
