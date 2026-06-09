@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
           <AuthSessionProvider>
 
             {/* 🌈 Global Pattern Background */}
-            <PatternBackground>
+            {/* <PatternBackground> */}
 
               <ToastContainer
                 position="top-right"
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
               <Analytics />
               <Footer />
 
-            </PatternBackground>
+            {/* </PatternBackground> */}
 
           </AuthSessionProvider>
         </ThemeProvider>
